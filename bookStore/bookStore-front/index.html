@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="bookStore">
+<head>
+	<title>Book Store</title>
+	<meta charset ="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--Styling-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--Scripts-->
+
+	<!--Angular-->
+	<script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-route.js"></script>
+    <script src="js/angular/angular-resource.js"></script>
+    <!--Javascript-->
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<!--Controllers-->
+	<script type="text/javascript" src="js/controllers/menuController.js"></script>
+	<script type="text/javascript" src="js/controllers/homeController.js"></script>
+	<script type="text/javascript" src="js/controllers/authorController.js"></script>
+	<script type="text/javascript" src="js/controllers/bookController.js"></script>
+	<script type="text/javascript" src="js/controllers/genreController.js"></script>
+	<script type="text/javascript" src="js/controllers/authorDetailController.js"></script>
+	<script type="text/javascript" src="js/controllers/bookDetailController.js"></script>
+	<script type="text/javascript" src="js/controllers/addController.js"></script>
+</head>
+<body>
+	<header ng-include="'partials/menuView.html'"></header>
+	<ng-view></ng-view>	
+</body>
+
+</html>
