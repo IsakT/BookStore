@@ -1,0 +1,75 @@
+/*Used for centering the navbar*/
+/*.center {
+	margin-left: auto;
+	margin-right: auto;
+}*/
+/*Centering the navbar*/
+.center.navbar .nav {
+	float:none;
+	display:inline-block;
+	*display:inline; /* ie7 fix */
+	*zoom:1; /* hasLayout ie7 trigger */
+	vertical-align: top;
+}
+/*Changing style of navbar li*/
+.navbar-inverse .navbar-nav > li {
+	 color:white;
+	 font-family: 'Stint Ultra Condensed', cursive;
+	 font-size:30px;
+	 width:100px;
+}
+/*Underline all links on hover*/
+.navbar-inverse .navbar-nav > li > a:hover {
+	 color:gray;
+	 text-decoration:underline;
+}
+/*Make navbar transparent*/
+.navbar{
+    background-color: transparent;
+    background: transparent;
+}
+/*Centering the menu title*/
+.menu{
+	text-align:center;
+}
+/*Style and position menu title*/
+.menuTitle{
+	font-family: 'Arizonia', cursive;
+	font-size: 80px;
+	position:relative;
+	margin:0 auto;
+	top:0px;
+}
+/*Set color of menu title*/
+.menuTitle > p{
+  color : gray;
+}
+/*Styling admin button*/
+.label-success > a{
+	color:black;
+	font-family:'Stint Ultra Condensed', cursive;
+	font-size:25px;
+}
+/*Position admin button*/
+.label-success{
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+/*Position search box*/
+.search{
+	position:fixed;
+	top:180px;
+	right:0%;
+	max-width:100%;
+}
+/*Set background image for menu*/
+.menu{
+	background-image: url("img/grayBackground.jpg");
+}
+/*Position social media buttons*/
+.a2a_kit {
+	position:fixed;
+	left:0%;
+	top:180px;
+}
