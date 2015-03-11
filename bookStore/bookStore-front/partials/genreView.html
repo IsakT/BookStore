@@ -1,3 +1,57 @@
 <button class="btn btn-default" ng-click="setMrBool()">Show meeee.</button>
 <h2 ng-show="mrBool">Meeee.</h2>
 <!-- <h2 ng-hide="mrBool">Youuuuu.</h2> -->
+<button class="btn btn-default" ng-click="setMrBool()">Show meeee.</button>
+<div ng-show="mrBool">Meeee.</div>
+<!--1: Show all genres organized vertically.
+	2: {{genre.name}}.....................................b=button with downwardsfacing arrow
+	3. When clicking on b, show this: 
+		<div>{{genre.name.description}}
+			<ul>
+				<li ng-repeat="books in BooksInThisGenre" ng-click="bookDetailViewRelay">
+					{{book}}
+				</li>
+			</ul>
+		</div>
+		.........................
+		FANTASY												[b]
+			
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic awesomeness stories about dragons and shit.
+			Totally epic. Fuckign right.
+
+			Books in this genre:
+
+				- The Hobbit
+				- Harry Potter and the Order of the Phoenix
+	4.
+
+
+	<h2 ng-hide="mrBool">Youuuuu.</h2> -->
+
+<div ng-controller="genreController2">
+	<!--<accordion close-others="oneAtATime">
+    <accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+      This content is straight in the template.
+    </accordion-group>
+    <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+      {{group.content}}
+    </accordion-group>
+    <accordion-group heading="Dynamic Body Content">
+      <p>The body of the accordion group grows to fit the contents</p>
+        <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+        <div ng-repeat="item in items">{{item}}</div>
+    </accordion-group>-->
+    <accordion-group is-open="status.open">
+        <accordion-heading>
+            Genre <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        </accordion-heading>
+        Description + Book list.
+    </accordion-group>
+  </accordion>
+</div>
