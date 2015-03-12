@@ -73,3 +73,12 @@
 	left:0%;
 	top:160px;
 }
+/*Set size of panel inside modal in bookDetails*/
+.panel{
+    width: 60%; /* respsonsive width */
+}
+.bookCover
+{
+	position:fixed;
+	right:1%;
+}
