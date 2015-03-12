@@ -45,13 +45,13 @@
   color : gray;
 }
 /*Styling admin button*/
-.label-success > a{
+.btn-success {
 	color:black;
 	font-family:'Stint Ultra Condensed', cursive;
-	font-size:25px;
+	font-size:20px;
 }
 /*Position admin button*/
-.label-success{
+.btn-success{
 	position:fixed;
 	top:0px;
 	left:0px;
@@ -59,7 +59,7 @@
 /*Position search box*/
 .search{
 	position:fixed;
-	top:180px;
+	top:160px;
 	right:0%;
 	max-width:100%;
 }
@@ -71,5 +71,5 @@
 .a2a_kit {
 	position:fixed;
 	left:0%;
-	top:180px;
+	top:160px;
 }

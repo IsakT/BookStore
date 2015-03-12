@@ -18,7 +18,7 @@
           <li><a href="#/authors">Authors</a></li>
           <li><a href="#/books">Books</a></li>
           <li><a href="#/genres">Genres</a></li>
-          <li><a href="#/add">Add</a></li>
+          <li><a href="#/add" ng-show="showAdd">Add</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav><!-- /.container-fluid -->
@@ -30,7 +30,7 @@
               <li class="search"><input type="text" class="form-control" placeholder="Search"></li>
             </div>
             <li>
-              <h3><span class="label label-success"><a href="">Admin</a></span></h3>
+              <button type="button" class="btn btn-success btn-xs" ng-click="login()">Admin</button>
             </li>
       </ul>
       <div class="a2a_kit a2a_kit_size_32 a2a_default_style">

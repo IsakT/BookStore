@@ -1,7 +1,8 @@
 var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap"]).
 	config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider){
 		$routeProvider.
-			when("/home", {templateUrl:"partials/homeView.html"}).
+			when("/home", {templateUrl:"partials/homeView.html",
+						  controller: "homeController"}).
 			when("/authors", {templateUrl:"partials/authorView.html",
 						  controller: "authorController"}).
 			when("/books", {templateUrl: "partials/bookView.html",
