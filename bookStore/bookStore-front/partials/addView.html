@@ -4,7 +4,7 @@
 
   <h2>Please enter book credentials<h2>
   <div class="input-group">
-      <input type="text" placeholder="Author" class="form-control" aria-label="...">
+      <input type="text" ng-model="callAuthor" placeholder="Author" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
         <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing <span class="caret"></span></button>
        <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -19,7 +19,7 @@
 
 
     <div class="input-group">
-      <input type="text" placeholder="Title" class="form-control" aria-label="...">
+      <input type="text" ng-model="callTitle" placeholder="Title" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
         <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -34,7 +34,7 @@
 
 
 <div class="input-group">
-      <input type="text" placeholder="Genre" class="form-control" aria-label="...">
+      <input type="text" ng-model="callGenre" placeholder="Genre" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
         <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing <span class="caret"></span></button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -48,20 +48,19 @@
 
     <div class="input-group">
     <div class="form-group">
-          <input type="text" class="form-control" placeholder="ISBN">
+          <input type="text" class="form-control" ng-model="callISBN" placeholder="ISBN">
     </div>
   </div>
     <br />
 
 
-    <div class="input-group" >
-     <div class="form-group">
-          <input type="text" class="form-control" placeholder="Description">
-     </div>
-   </div>
+     <textarea class="form-control" id="data" rows="5" ng-model="callData" placeholder="Add book description here..."></textarea>
      <br />
 
-<button type="add" class="btn btn-default col-lg-4">Add to database</btn-grouptton>
+
+
+
+<button type="add" class="btn btn-default col-lg-4">Add to database</button>
 
 </div> 
 
