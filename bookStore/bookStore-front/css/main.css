@@ -77,9 +77,13 @@
 .panel{
     width: 60%; /* respsonsive width */
 }
+/*Position book cover in bookDetailView*/
 .bookCover
 {
 	position:fixed;
 	right:1%;
-}
+/*}
+.panel-default{
+	position:relative;
+}*/
 

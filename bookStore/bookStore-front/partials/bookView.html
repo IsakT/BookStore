@@ -1,60 +1,91 @@
-<div>
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  		Launch demo modal
-	</button>
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Book Name <a href="">edit</a></h4>
-      </div>
-      <div class="modal-body">
-      	<div class="bookCover">
-      		<img src="css/img/book.jpg" class="img-responsive" alt="Responsive image">
-      	</div>
-        <div class="panel panel-default">
-  			<div class="panel-body">
-    			<ul class="list-group">
-				  <li class="list-group-item">Author: <span class="badge">Yuval Noah Harari </span>
-				  	 <a href="">edit</a>
-				  </li>
-				  <li class="list-group-item">Published: <span class="badge">2015-02-23</span>
-				  	<a href="">edit</a>
-				  </li>
-				  <li class="list-group-item">Genre: <span class="badge">Historia & arkeologi</span>
-				  	<a href="">edit</a>
-				  </li>
-				  <li class="list-group-item">ISBN: <span class="badge"> 9789127140394</span>
-				  	<a href="">edit</a>
-				  </li>
-				</ul>
-  			</div>
-		</div>
-		<div class="panel panel-default">
-  			<div class="panel-body">
-    			<p>
-					Sapiens är en storslagen berättelse om människans ursprung, nutid och framtid. Historikern Yuval Noah Harari tar oss med från Homo sapiens första steg på jorden, då vi var ett däggdjur bland alla andra, till idag när vi står som världens obestridda härskare - med makt att både skapa och utplåna liv.
-					<div ng-show="more">
-					<p>För cirka 70 000 år sedan var jorden befolkad av minst sex olika mänskliga arter. Ingen av dem hade någon större inverkan på den globala ekologin. Idag har bara en art överlevt - Homo sapiens. Hur blev det så? En del av hemligheten bakom framgångarna är att vi är det enda djur som kan prata om saker som existerar enbart i vår egen fantasi, såsom gudar, nationer, pengar och mänskliga rättigheter. Om detta och mycket mer handlar denna internationella bästsäljare som ger nytt bränsle åt diskussionen om vårt gemensamma förflutna och planetens framtid.
-
-					Professor Yuval Noah Harari (född 1976) är verksam vid Hebreiska universitetet i Jerusalem och slutförde sin doktorsavhandling vid University of Oxford. Hans specialområde är världens historia och makrohistoriska processer. Harari har publicerat ett flertal böcker och artiklar och
-					hans filmade föreläsningar om världens historia har blivit en stor succé på Youtube.</p>
-					</div><a href="" ng-click="readMore()">read more</a>					
-					<div class="collapse" id="collapseExample">
-					  <div class="well">
-					    ...
-					  </div>
+<div class="container">
+	<section class="row">
+  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+  			<div class="center-panel panel panel-default">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading"><strong>Books</strong></div>
+			  <!-- Table -->
+			  <table class="table">
+			    	<thead>
+			    		<tr>
+			    			<th>Title</th>
+			    			<th>Author</th>
+			    			<th>Genre</th>
+			    			<th>Year</th>
+			    			<th>Details</th>
+			    			<th>ISBN</th>
+			    			
+			    		</tr>
+			    	</thead>
+			    	<tbody>
+			    		<tr ng-repeat="book in books">
+			    			<td>{{book.title}}</td>
+			    			<td>{{book.author}}</td>
+			    			<td>{{book.genre}}</td>
+			    			<td>{{book.year}}</td>
+			    			<td>{{book.isbn}}</td>
+			    			<td><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			  						Book Details
+								</button>
+							</td>
+			    		</tr>
+			    	</tbody>
+			  </table>
+			 </div> 
+			<div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">Book Name</h4>
+			      </div>
+			      <div class="modal-body">
+			      	<div class="bookCover">
+			      		<img src="css/img/book.jpg" class="img-responsive" alt="Responsive image">
+			      	</div>
+			        <div class="panel panel-default">
+			  			<div class="panel-body">
+			    			<ul class="list-group">
+							  <li class="list-group-item">Author: <span class="badge">Yuval Noah Harari </span>
+							  </li>
+							  <li class="list-group-item">Published: <span class="badge">2015-02-23</span>
+							  </li>
+							  <li class="list-group-item">Genre: <span class="badge">Historia & arkeologi</span>
+							  </li>
+							  <li class="list-group-item">ISBN: <span class="badge"> 9789127140394</span>
+							  </li>
+							</ul>
+			  			</div>
+			  			<a href="">edit</a>
 					</div>
-				</p>
-  			</div>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>		
+					<div class="panel panel-default">
+			  			<div class="panel-body">
+			  				<a href="">edit</a>
+			    			<p>
+								Sapiens är en storslagen berättelse om människans ursprung, nutid och framtid. Historikern Yuval Noah Harari tar oss med från Homo sapiens första steg på jorden, då vi var ett däggdjur bland alla andra, till idag när vi står som världens obestridda härskare - med makt att både skapa och utplåna liv.
+								<div ng-show="more">
+								<p>För cirka 70 000 år sedan var jorden befolkad av minst sex olika mänskliga arter. Ingen av dem hade någon större inverkan på den globala ekologin. Idag har bara en art överlevt - Homo sapiens. Hur blev det så? En del av hemligheten bakom framgångarna är att vi är det enda djur som kan prata om saker som existerar enbart i vår egen fantasi, såsom gudar, nationer, pengar och mänskliga rättigheter. Om detta och mycket mer handlar denna internationella bästsäljare som ger nytt bränsle åt diskussionen om vårt gemensamma förflutna och planetens framtid.
+
+								Professor Yuval Noah Harari (född 1976) är verksam vid Hebreiska universitetet i Jerusalem och slutförde sin doktorsavhandling vid University of Oxford. Hans specialområde är världens historia och makrohistoriska processer. Harari har publicerat ett flertal böcker och artiklar och
+								hans filmade föreläsningar om världens historia har blivit en stor succé på Youtube.</p>
+								</div><a href="" ng-click="readMore()">read more</a>					
+								<div class="collapse" id="collapseExample">
+								  <div class="well">
+								    ...
+								  </div>
+								</div>
+							</p>
+			  			</div>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			</div>
+		 </div>
+	</section>	
+</div>			
