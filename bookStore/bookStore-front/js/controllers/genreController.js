@@ -12,12 +12,12 @@ app.controller("genreController2", ["$scope", function($scope){
 
 	$scope.genres = [
 	{
-	  title: 'Genre - 1',
-	  description: 'Description - 1'
+	  title: 'Adventure',
+	  description: 'All about swords and stuff'
 	},
 	{
-	  title: 'Genre - 1',
-	  description: 'Description - 1'
+	  title: 'True Crime',
+	  description: 'Stuff that actually happened'
 	},
 	{
 	  title: 'Genre - 1',
