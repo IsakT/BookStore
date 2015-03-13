@@ -77,6 +77,12 @@
 .panel{
     width: 60%; /* respsonsive width */
 }
+
+.input-group, .marg {
+	margin-bottom:20px;
+}
+
+
 /*Position book cover in bookDetailView*/
 .bookCover
 {
