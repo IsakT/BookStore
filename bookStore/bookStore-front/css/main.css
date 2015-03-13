@@ -77,19 +77,133 @@
 .panel{
     width: 60%; /* respsonsive width */
 }
-
-.input-group, .marg {
-	margin-bottom:20px;
-}
-
-
-/*Position book cover in bookDetailView*/
 .bookCover
 {
 	position:fixed;
 	right:1%;
-/*}
-.panel-default{
-	position:relative;
-}*/
+}
+
+.homeDiv{
+	padding: 5px;
+	background-color: purple;
+	border-radius: 25px;
+	width: 100%;
+	height: 100%;
+
+}
+
+.homeBookDet{
+	padding: 5px;
+	background-color: #4C6161;
+	
+	border-radius: 10px;
+	border-color: black;
+	width: 100%;
+}
+
+.bookDesc{
+	padding: 10px;
+	border: 1px solid;
+	border-radius: 10px;
+	background-color: #99C2C2;
+	width: 100%px;
+	word-wrap: break-word;
+
+}
+
+.readMore{
+	text-align: right;
+	float: right;
+    color: #1E2727;
+}
+
+
+/* ====== MEDIA OBJECT ====== */
+/* URL: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+*/
+.media {
+  margin:10px;
+  background: transparent;
+  background-color: transparent;
+}
+
+.media, .media__body {
+  overflow:hidden;
+  _overflow:visible;
+  zoom:1;
+}
+
+.media .media__img {
+  float:left;
+  margin-right: 10px;
+}
+
+.media .media__img img{
+  display:block;
+
+}
+
+.media .imgExt{
+  float:right;
+  margin-left: 10px;
+}
+
+/* ====== FLAG OBJECT ====== */
+/* URL: http://csswizardry.com/2013/05/the-flag-object/ */
+
+.flag{
+  display:table;
+  width:auto;
+  margin:10px;
+}
+
+.flag__image, .flag__body{
+  display:table-cell;
+  vertical-align:middle;
+  
+  .flag--top &{
+    vertical-align:top;
+  }
+  
+  .flag--bottom &{
+    vertical-align:bottom;
+  }
+}
+
+.flag__image{
+  padding-right:10px;
+  
+  > img{
+    display:block;
+  }
+  
+  .flag--rev &{
+    padding-right:0;
+    padding-left:10px;
+  }
+}
+
+.flag__body{
+  width:100%;
+}
+
+
+
+/* Common styling for demo purposes */
+
+.EPSILON{
+  width: 100%;
+  padding: 20px;  
+  margin: 0 auto;  
+  box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.3);
+  background-color: red;
+}
+
+.media, .flag{
+  background: #f5f5f5;
+  border :1px solid #d5d5d5;
+  padding: 10px;
+}
+
 
