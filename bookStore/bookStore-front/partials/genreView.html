@@ -36,15 +36,34 @@
 
 
 	<h2 ng-hide="mrBool">Youuuuu.</h2> -->
+<div class="container">
+	<h2>Genres:</h2>
+	<div class="col-sm-10 col-xs-6" ng-controller="genreController2">
+		<accordion close-others="oneAtATime">
+	    <accordion-group heading="genre.title" ng-repeat="g in genres">
+	      <p>genre.description</p>
+	      <p ng-repeat="b in books">
+	      	<a href="#/bookDetailView">
+	      		book.title
+	      	</a>
+	      <p> 
+	    </accordion-group>
+	  </accordion>
+	</div>
+</div>
 
-<div class="col-sm-10 col-xs-6" ng-controller="genreController2">
-	<accordion close-others="oneAtATime">
-    <accordion-group heading="genre.title" ng-repeat="g in genres">
-      <p><strong>genre.description</strong></p>
-      <p ng-repeat="b in books">
-      	<a href="http://localhost:8080/BookStore.git/bookStore/bookStore-front/index.html#/genres">
-      		book.title
-      	</a>
-      <p> 
-    </accordion-group>
-  </accordion>
+<div class="container">
+	<h2>Genres:</h2>
+	<div class="col-sm-10 col-xs-6" ng-controller="genreController2">
+		<accordion close-others="oneAtATime">
+	    <accordion-group heading={{scope.genre.title}} ng-repeat="g in genres">
+	      <p>genre.description</p>
+	      <p ng-repeat="b in books">
+	      	<a href="#/bookDetailView">
+	      		book.title
+	      	</a>
+	      <p> 
+	    </accordion-group>
+	  </accordion>
+	</div>
+</div>
