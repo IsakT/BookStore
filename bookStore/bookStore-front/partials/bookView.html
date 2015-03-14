@@ -1,6 +1,6 @@
 <div class="container">
 	<section class="row">
-  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+  		<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
   			<div class="center-panel panel panel-default">
 			  <!-- Default panel contents -->
 			  <div class="panel-heading"><strong>Books</strong></div>
@@ -12,8 +12,8 @@
 			    			<th>Author</th>
 			    			<th>Genre</th>
 			    			<th>Year</th>
-			    			<th>Details</th>
 			    			<th>ISBN</th>
+			    			<th>Details</th>
 			    			
 			    		</tr>
 			    	</thead>
@@ -45,7 +45,7 @@
 			      		<img src="css/img/book.jpg" class="img-responsive" alt="Responsive image">
 			      	</div>
 			        <div class="panel panel-default">
-			  			<div class="panel-body">
+			  			<div class="panel-body" ng-hide="showEditWindow">
 			    			<ul class="list-group">
 							  <li class="list-group-item">Author: <span class="badge">Yuval Noah Harari </span>
 							  </li>
@@ -57,11 +57,24 @@
 							  </li>
 							</ul>
 			  			</div>
-			  			<a href="">edit</a>
+			  			<div class="panel-body" ng-show="editBookView">
+			    			<ul class="list-group" ng-repeat="b in books | limitTo: 1">
+							  <li class="list-group-item">Author: <input type="text" class="form-control" ng-model="b.author">
+							  </li>
+							  <li class="list-group-item">Published: <input type="text" class="form-control" ng-model="b.year">
+							  </li>
+							  <li class="list-group-item">Genre: <input type="text" class="form-control" ng-model="b.genre">
+							  </li>
+							  <li class="list-group-item">ISBN: <input type="text" class="form-control" ng-model="b.isbn">
+							  </li>
+							</ul>
+							<a class="saveButton" href="" ng-show="showSave" ng-click="editBook()" ng-click="saveData()">save</a>
+			  			</div>
+			  			<a href="" ng-show="showEdit" ng-click="editBook()">edit</a>
 					</div>
 					<div class="panel panel-default">
 			  			<div class="panel-body">
-			  				<a href="">edit</a>
+			  				<a href="" ng-show="showTxtEdit">edit</a>
 			    			<p>
 								Sapiens är en storslagen berättelse om människans ursprung, nutid och framtid. Historikern Yuval Noah Harari tar oss med från Homo sapiens första steg på jorden, då vi var ett däggdjur bland alla andra, till idag när vi står som världens obestridda härskare - med makt att både skapa och utplåna liv.
 								<div ng-show="more">

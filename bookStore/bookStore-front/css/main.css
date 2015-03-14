@@ -77,10 +77,19 @@
 .panel{
     width: 60%; /* respsonsive width */
 }
+/*Position book cover in bookDetailView*/
 .bookCover
 {
 	position:fixed;
 	right:1%;
+}
+/*Position the panel in bookView*/
+.center-panel{
+	position:relative;
+	width:100%;
+}
+.saveButton{
+	position:right100%;
 }
 
 
