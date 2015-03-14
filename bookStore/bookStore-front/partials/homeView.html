@@ -1,111 +1,40 @@
-
-<!--<div class="container">
-	<h2>Our top three:</h2>
-    <div class="row">
-    	<div class="homeDiv">
-	  		<div class="col-md-2 col-md-3-offset-3">
-	  			<div class="homeBookCover">
-	  				<img class="bookCoverPic" src="http://www.fantasybookreview.co.uk/images/night-watch.jpg">
-				</div>
-	  			
-	  		</div>
-	  		<div class="col-md-8 col-md-5-offset-5">
-	  			<div class="homeBookDet">
-					<h2>Night watch</h2>
-					<h4>By: <a href="#/allBooksByThisAuthor" class="one">Sir Terry Pratchett</a></h4>
-					<h5>2002</h5>
-					<div class="bookDesc">
-						<p>
-							On the morning of the 30th anniversary of the Glorious Revolution of the Twenty-Fifth of May (and as such the anniversary of the death of John Keel, Vimes' hero and former mentor), Sam Vimes is caught in a magical storm while pursuing Carcer Dun, a notorious criminal. He awakens to find that he has been rescued by Miss Palm (whom Vimes knows in the future as Mrs Palm, Head of the Guild of Seamstresses – seamstresses referring to prostitutes). He determines that he has somehow been sent back in time.
-
-							Vimes's first idea is to ask the wizards at the Unseen University to send him home, but before he can act on this, he is arrested for breaking curfew by a younger version of himself. Incarcerated in a cell next to his is Carcer, who after being released joins the Unmentionables, the secret police carrying out the paranoid whims of the Patrician of the time, Lord Winder.
-							<a href="#/bookDetailView" class="readMore">+Read more</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-    	<div class="homeDiv">
-	  		<div class="col-md-2 col-md-3-offset-3">
-	  			<div class="homeBookCover">
-	  				<img class="bookCoverPic" src="http://www.fantasybookreview.co.uk/images/night-watch.jpg">
-				</div>
-	  			
-	  		</div>
-	  		<div class="col-md-8 col-md-5-offset-5">
-	  			<div class="homeBookDet">
-					<h2>Night watch</h2>
-					<h4>By: <a href="#/allBooksByThisAuthor" class="one">Sir Terry Pratchett</a></h4>
-					<h5>2002</h5>
-					<div class="bookDesc">
-						<p>
-							On the morning of the 30th anniversary of the Glorious Revolution of the Twenty-Fifth of May (and as such the anniversary of the death of John Keel, Vimes' hero and former mentor), Sam Vimes is caught in a magical storm while pursuing Carcer Dun, a notorious criminal. He awakens to find that he has been rescued by Miss Palm (whom Vimes knows in the future as Mrs Palm, Head of the Guild of Seamstresses – seamstresses referring to prostitutes). He determines that he has somehow been sent back in time.
-
-							Vimes's first idea is to ask the wizards at the Unseen University to send him home, but before he can act on this, he is arrested for breaking curfew by a younger version of himself. Incarcerated in a cell next to his is Carcer, who after being released joins the Unmentionables, the secret police carrying out the paranoid whims of the Patrician of the time, Lord Winder.
-							<a href="#/bookDetailView" class="readMore">+Read more</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-    	<div class="homeDiv">
-	  		<div class="col-md-2 col-md-3-offset-3">
-	  			<div class="homeBookCover">
-	  				<img class="bookCoverPic" src="http://www.fantasybookreview.co.uk/images/night-watch.jpg">
-				</div>
-	  			
-	  		</div>
-	  		<div class="col-md-8 col-md-5-offset-5">
-	  			<div class="homeBookDet">
-					<h2>Night watch</h2>
-					<h4>By: <a href="#/allBooksByThisAuthor" class="one">Sir Terry Pratchett</a></h4>
-					<h5>2002</h5>
-					<div class="bookDesc">
-						<p>
-							On the morning of the 30th anniversary of the Glorious Revolution of the Twenty-Fifth of May (and as such the anniversary of the death of John Keel, Vimes' hero and former mentor), Sam Vimes is caught in a magical storm while pursuing Carcer Dun, a notorious criminal. He awakens to find that he has been rescued by Miss Palm (whom Vimes knows in the future as Mrs Palm, Head of the Guild of Seamstresses – seamstresses referring to prostitutes). He determines that he has somehow been sent back in time.
-
-							Vimes's first idea is to ask the wizards at the Unseen University to send him home, but before he can act on this, he is arrested for breaking curfew by a younger version of himself. Incarcerated in a cell next to his is Carcer, who after being released joins the Unmentionables, the secret police carrying out the paranoid whims of the Patrician of the time, Lord Winder.
-							<a href="#/bookDetailView" class="readMore">+Read more</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>-->
-
 <div class="container"> 
+
 	<h2>Our top three:</h2>
+
 	<div class="row"> 
+
 		<div class="col-xs-7 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
-			<div class="media" class="EPSILON">
-			  <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/" class="media__img">
-			    <img src="http://www.fantasybookreview.co.uk/images/night-watch.jpg" />
+
+			<div class="homeDiv" ng-repeat="b in topThree">
+
+			  <a href="#/bookDetalView">
+			    <img class="homeBookCoverImage" src={{b.bookCover}} />
 			  </a>
-				<div class="media__body">
-					<div class="homeBookDet">
-						<h2>Night watch *****</h2>
-					    <h4>By: <a href="#/allBooksByThisAuthor" class="one">Sir Terry Pratchett</a></h4>
-						<h5>2002</h5>
 
-					    	<div class="bookDesc">
-					    	<p>
-								On the morning of the 30th anniversary of the Glorious Revolution of the Twenty-Fifth of May (and as such the anniversary of the death of John Keel, Vimes' hero and former mentor), Sam Vimes is caught in a magical storm while pursuing Carcer Dun, a notorious criminal. He awakens to find that he has been rescued by Miss Palm (whom Vimes knows in the future as Mrs Palm, Head of the Guild of Seamstresses – seamstresses referring to prostitutes). He determines that he has somehow been sent back in time.
+				<div class="homeDiv__body" >
 
-								Vimes's first idea is to ask the wizards at the Unseen University to send him home, but before he can act on this, he is arrested for breaking curfew by a younger version of himself. Incarcerated in a cell next to his is Carcer, who after being released joins the Unmentionables, the secret police carrying out the paranoid whims of the Patrician of the time, Lord Winder.
+					<div class="homeBookDetails">
 
-								<a href="#/bookDetailView" class="readMore">+Read more</a>
-							</p>
+						<h2>{{b.title}} <p class="homeRating">{{b.rating}}</p></h2>
+					    <h4>By: <a href="#/allBooksByThisAuthor" class="one">{{b.author}}</a></h4>
+						<h5>{{b.publishingDate}}</h5>
+
+					    	<div class="homeBookDescription">
+						    	<p>
+									{{b.description}}
+									<a href="#/bookDetailView" class="homeReadMore">+Read more</a>
+								</p>
 							</div>
-				  </div>
+
+				  	</div>
+
 				</div>
+
 			</div>
+
 		</div>
+		
 	</div>
+
 </div>

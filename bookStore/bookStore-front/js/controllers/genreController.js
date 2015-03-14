@@ -12,39 +12,40 @@ app.controller("genreController2", ["$scope", function($scope){
 
 	$scope.genres = [
 	{
-	  title: 'Adventure',
-	  description: 'All about swords and stuff'
+	  title: 'Fantasy',
+	  description: 'All about swords and stuff, dragons, maidens, magic rings, talking animals, witches, ketchup with wings etc.'
 	},
+
 	{
 	  title: 'True Crime',
-	  description: 'Stuff that actually happened'
+	  description: 'Stuff that actually happened. Bad people doing bad things to marginally better people, generally with some sort of pointed metal instrument. Or, like poison.'
 	},
 	{
-	  title: 'Genre - 1',
-	  description: 'Description - 1'
+	  title: 'Horror',
+	  description: 'I keel you ded, hooman. BOO! -- AAH! What the what you inconsiderent eerily transparent person - oh my dog, you´re a ghost. Shit. I´m fucked.'
 	},
 	{
-	  title: 'Genre - 1',
-	  description: 'Description - 1'
+	  title: 'Young Adult',
+	  description: 'Like, OMG did you see LaShawna´s new hair style? Talk about nasty, mhmm. Twilight and all that shit.'
 	},
 	{
-	  title: 'Genre - 2',
-	  description: 'Description- 2'
+	  title: 'Romance',
+	  description: 'Jessica´s hand gently slid down Amandas back... And then they lived happily ever after, after having killed all the zombies in the universe. Their wedding ceremony was precided over by the Space Pope, who subsequenty joined them in a rather spirited threesome.'
 	}
 	];
 
 	$scope.books = [
 	{
-		title: "Derp",
-		author: "Derpy"
+		title: "Oh the things",
+		author: "Derpy McHerpaderp"
 	},
 	{
-		title: "Derp",
-		author: "Derpy"
+		title: "Lions, umbrellas and moss - my life among the Gnolls",
+		author: "Sweaty Bootrash"
 	},
 	{
-		title: "Derp",
-		author: "Derpy"
+		title: "Potatoes - are they just wierd goose eggs?",
+		author: "Shrilly McWankersham"
 	}
 	];
 
@@ -53,3 +54,4 @@ app.controller("genreController2", ["$scope", function($scope){
 	isFirstDisabled: false
 	};
 }]);
+

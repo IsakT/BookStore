@@ -1,69 +1,26 @@
-<!-- <button class="btn btn-default" ng-click="setMrBool()">Show meeee.</button>
-<h2 ng-show="mrBool">Meeee.</h2>
-<h2 ng-hide="mrBool">Youuuuu.</h2>
-<button class="btn btn-default" ng-click="setMrBool()">Show meeee.</button>
-<div ng-show="mrBool">Meeee.</div>-->
+<div class="container">
 
+	<h2>Genres:</h2>
 
+	<div class="genreDiv">
 
-<!--1: Show all genres organized vertically.
-	2: {{genre.name}}.....................................b=button with downwardsfacing arrow
-	3. When clicking on b, show this: 
-		<div>{{genre.name.description}}
-			<ul>
-				<li ng-repeat="books in BooksInThisGenre" ng-click="bookDetailViewRelay">
-					{{book}}
-				</li>
-			</ul>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0" ng-controller="genreController2">
+
+			<accordion>
+
+			    <accordion-group heading={{g.title}} ng-repeat="g in genres" class="genreAccordion">
+
+			      <p> {{g.description}} </p>
+
+<!--			      <p> {{g.bookList}} </p> -->
+
+			      <p ng-repeat="b in books"> <a href="#/bookDetailViewForThisBook"> {{b.title}} </a> </p> 
+
+			    </accordion-group>
+
+		  	</accordion>
+
 		</div>
-		.........................
-		FANTASY												[b]
-			
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic awesomeness stories about dragons and shit.
-			Totally epic. Fuckign right.
-
-			Books in this genre:
-
-				- The Hobbit
-				- Harry Potter and the Order of the Phoenix
-	4.
-
-
-	<h2 ng-hide="mrBool">Youuuuu.</h2> -->
-<div class="container">
-	<h2>Genres:</h2>
-	<div class="col-sm-10 col-xs-6" ng-controller="genreController2">
-		<accordion close-others="oneAtATime">
-	    <accordion-group heading="genre.title" ng-repeat="g in genres">
-	      <p>genre.description</p>
-	      <p ng-repeat="b in books">
-	      	<a href="#/bookDetailView">
-	      		book.title
-	      	</a>
-	      <p> 
-	    </accordion-group>
-	  </accordion>
 	</div>
-</div>
 
-<div class="container">
-	<h2>Genres:</h2>
-	<div class="col-sm-10 col-xs-6" ng-controller="genreController2">
-		<accordion close-others="oneAtATime">
-	    <accordion-group heading={{scope.genre.title}} ng-repeat="g in genres">
-	      <p>genre.description</p>
-	      <p ng-repeat="b in books">
-	      	<a href="#/bookDetailView">
-	      		book.title
-	      	</a>
-	      <p> 
-	    </accordion-group>
-	  </accordion>
-	</div>
 </div>
