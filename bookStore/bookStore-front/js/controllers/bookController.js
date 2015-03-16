@@ -1,102 +1,33 @@
-app.controller("bookController", ["$scope", function($scope){
+app.controller("bookController", ["$http", "$scope", function($http, $scope){
 	
+	$http
+		.get("data/bookData.json")
+		.success(function(data){
+			console.log("Got dummydata", data)
+			$scope.bookData = data;
+	});
+	//Get the id of the book being clicked	
+	$scope.getBookId = function(bookId){
+		$scope.bookId = bookId;
+		console.log(bookId);
+	}
+
 	$scope.readMore = function(){
 		$scope.more = !$scope.more;
+		$scope.summary = !$scope.summary;
 	}
 
 	$scope.editBook = function(){
-		$scope.showEditWindow = !$scope.showEditWindow;
+		$scope.showDetailWindow = !$scope.showDetalWindow;
 		$scope.editBookView = !$scope.editBookView;
+		$scope.showEdit = !$scope.showEdit;
+	}
+	$scope.saveData = function(){
+		$scope.showDetailWindow = !$scope.showDetailWindow;
+		$scope.editBookView = !$scope.editBookView;
+		$scope.showEdit = !$scope.showEdit;
 	}
 
 	// $scope.books = Book.index();
-
-	$scope.books = [
-		{"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-		 {"title":"Sapiens : en kort historik över mänskligheten",
-		 "description":"jkasld",
-		 "author":"Yuval Noah Harari ",
-		 "genre":"Historia & arkeologi",
-		 "year":"2015",
-		 "isbn":" 9789127140394",
-		 "details":"asff"},
-
-
-	]	
+	
 }]);
