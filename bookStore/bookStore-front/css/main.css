@@ -51,7 +51,12 @@
 	font-size:20px;
 }
 /*Position admin button*/
-.btn-success{
+.login-button{
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+.logout-button{
 	position:fixed;
 	top:0px;
 	left:0px;
@@ -88,8 +93,20 @@
 	position:relative;
 	width:100%;
 }
+/*Position Save button in bookEditView*/
 .saveButton{
 	position:right100%;
+}
+/*Position username textbox in loginView*/
+.username{
+	margin-bottom: 30px;
+	width:300px;
+	margin-left: 134px
+}
+/*Position password textbox in loginView*/
+.password{
+	width:300px;
+	margin-left: 134px
 }
 
 

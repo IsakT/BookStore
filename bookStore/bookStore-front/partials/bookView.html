@@ -84,6 +84,9 @@
 								  </div>
 							</p>
 			  			</div>
+			  			<div class="form-group marg" ng-repeat="book in bookData" ng-if="book.id == bookId" ng-show="showEditDescriptionWindow">
+						     <textarea class="form-control" id="data" rows="5" ng-model="editDescription" placeholder="Add book description here...">{{book.description}}</textarea>
+						 </div>
 					</div>
 			      </div>
 			      <div class="modal-footer">

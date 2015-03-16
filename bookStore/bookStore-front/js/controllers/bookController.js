@@ -6,6 +6,9 @@ app.controller("bookController", ["$http", "$scope", function($http, $scope){
 			console.log("Got dummydata", data)
 			$scope.bookData = data;
 	});
+
+	var editBook;
+	var editDescription;	
 	//Get the id of the book being clicked	
 	$scope.getBookId = function(bookId){
 		$scope.bookId = bookId;
