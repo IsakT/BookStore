@@ -1,0 +1,102 @@
+<div class="container authorBookView">
+	<section class="row">
+  		<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+  			<div class="center-panel panel panel-default authorBookViewPanel">
+			  <!-- Default panel contents -->
+			  <div class="panel-heading bookHeading"><strong>Books</strong></div>
+			  <!-- Table -->
+			  <table class="table bookTable">
+			    	<thead>
+			    		<tr>
+
+			    			<th>Author</th>
+			    			<th>Genre</th>
+			    			<th>Year</th>
+			    			<th>ISBN</th>
+			    			<th>Details</th>
+			    			
+			    		</tr>
+			    	</thead>
+			    	<tbody>
+			    		<tr ng-repeat="author in bookData">
+			    			<td>{{book.title}}</td>
+			    			<td>{{book.author}}</td>
+			    			<td>{{book.genre}}</td>
+			    			<td>{{book.year}}</td>
+			    			<td>{{book.isbn}}</td>
+			    			<td><button type="button" id="{{book.id}}" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
+			  						Book Details
+								</button>
+							</td>
+			    		</tr>
+			    	</tbody>
+			  </table>
+			 <!--<div>--> 
+			<div>
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel" ng-repeat="book in bookData" ng-if="book.id == bookId">{{book.title}}</h4>
+			      </div>
+			      <div class="modal-body">
+			      	<div class="bookCover" ng-repeat="book in bookData" ng-if="book.id == bookId">
+			      		<img ng-src="{{book.cover}}" class="img-responsive" alt="Responsive image">
+			      	</div>
+			        <div class="panel panel-default">
+			  			<div class="panel-body" ng-hide="showDetailWindow">
+			    			<ul class="list-group" ng-repeat="book in bookData" ng-if="book.id == bookId">
+							  <li class="list-group-item">Author: <span class="badge">{{book.author}}</span>
+							  </li>
+							  <li class="list-group-item">Published: <span class="badge">{{book.year}}</span>
+							  </li>
+							  <li class="list-group-item">Genre: <span class="badge">{{book.genre}}</span>
+							  </li>
+							  <li class="list-group-item">ISBN: <span class="badge"> {{book.isbn}}</span>
+							  </li>
+							</ul>
+			  			</div>
+			  			<div class="panel-body" ng-show="editBookView">
+			    			<ul class="list-group" ng-repeat="book in bookData" ng-if="book.id == bookId">
+							  <li class="list-group-item">Author: <input type="text" class="form-control" ng-model="book.author">
+							  </li>
+							  <li class="list-group-item">Published: <input type="text" class="form-control" ng-model="book.year">
+							  </li>
+							  <li class="list-group-item">Genre: <input type="text" class="form-control" ng-model="book.genre">
+							  </li>
+							  <li class="list-group-item">ISBN: <input type="text" class="form-control" ng-model="book.isbn">
+							  </li>
+							</ul>
+							<a class="saveButton" href="" ng-show="showSave" ng-click="saveData()">save</a>
+			  			</div>
+			  			<a href="" ng-show="showEdit" ng-click="editBook()">edit</a>
+					</div>
+					<div class="panel panel-default">
+			  			<div class="panel-body" ng-repeat="book in bookData" ng-if="book.id == bookId">
+			  				<a href="" ng-show="showTxtEdit">edit</a>
+			    			<p ng-hide="summary">{{book.description | limitTo: 150}}</p>
+							<p ng-show="more">{{book.description}}</p>	
+								</div><a href="" ng-click="readMore()">read more</a>					
+								<div class="collapse" id="collapseExample">
+								  <div class="well">
+								    ...
+								  </div>
+							</p>
+			  			</div>
+			  			<div class="form-group marg" ng-repeat="book in bookData" ng-if="book.id == bookId" ng-show="showEditDescriptionWindow">
+						     <textarea class="form-control" id="data" rows="5" ng-model="editDescription" placeholder="Add book description here...">{{book.description}}</textarea>
+						 </div>
+					</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			</div>
+			</div>
+		 </div>
+	</section>	
+</div>			
