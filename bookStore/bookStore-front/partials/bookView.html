@@ -11,10 +11,7 @@
 			    			<th>Title</th>
 			    			<th>Author</th>
 			    			<th>Genre</th>
-			    			<th>Year</th>
-			    			<th>ISBN</th>
-			    			<th>Details</th>
-			    			
+			    			<th>Details</th>			    			
 			    		</tr>
 			    	</thead>
 			    	<tbody>
@@ -22,9 +19,7 @@
 			    			<td>{{book.title}}</td>
 			    			<td>{{book.author}}</td>
 			    			<td>{{book.genre}}</td>
-			    			<td>{{book.year}}</td>
-			    			<td>{{book.isbn}}</td>
-			    			<td><button type="button" id="{{book.id}}" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
+			    			<td><button type="button" id="{{book.id}}" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
 			  						Book Details
 								</button>
 							</td>

@@ -36,7 +36,7 @@ app.controller("menuController", ["$scope", "$rootScope", function($scope, $root
 		var w = window.open('','','width=200,height=200')
 			w.document.write('Logged in successfully as: ')
 			w.focus()
-			setTimeout(function() {w.close();}, 3000)
+			setTimeout(function() {w.close();}, 2000)
 	}
 
 }]);
