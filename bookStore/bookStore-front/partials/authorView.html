@@ -1,0 +1,26 @@
+<div class="container">
+
+	<h2>Authors:</h2>
+
+	<div class="authorDiv">
+
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0" ng-controller="authorController">
+
+			<accordion>
+			   <accordion-group heading={{book.author}} ng-repeat="book in bookData" class="authorAccordion">
+			   		<p>Böcker skrivna av {{book.author}}:</p>
+			      <p>Title: {{book.title}}</p>
+			      <p>Description</p>
+			      <p>{{book.description}}</p>
+
+			      <!-- <p ng-repeat="b in books"> <a href="#/bookDetailViewForThisBook"> {{b.title}} </a> </p> -->
+			    </accordion-group>
+		  	</accordion>
+
+		</div>
+	</div>
+
+</div>
+
+
+CONTROLLER
