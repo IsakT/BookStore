@@ -1,22 +1,50 @@
-app.controller("addController", ["$scope", function($scope){
+app.controller("addController", ["$scope", "$http", function($scope, $http){
 	console.log("Controller is working");
 
+	$http
+		.get("data/bookData.json")
+		.success(function(data ){
+			console.log("Got dummydata", data)
+			$scope.bookData = data;
+		});
 
-$scope.forfattare = [
-	{
-	  name: 'Romance',
-	  description: 'Jessica´s hand gently slid down Amandas back... And then they lived happily ever after, after having killed all the zombies in the universe. Their wedding ceremony was precided over by the Space Pope, who subsequenty joined them in a rather spirited threesome.'
-	},
+	$scope.selectedAuthor = {};
+
+	$scope.authorsInDb = [
 		{
-	  name: 'kalle',
-	  description: 'Jessica´s hand gently slid down Amandas back... And then they lived happily ever after, after having killed all the zombies in the universe. Their wedding ceremony was precided over by the Space Pope, who subsequenty joined them in a rather spirited threesome.'
-	},
+		  name: 'Benjamin Sijercic'
+		},
+		{
+		  name: 'Kim Holmberg'
+		},
 
 		{
-	  name: 'fizze',
-	  description: 'Jessica´s hand gently slid down Amandas back... And then they lived happily ever after, after having killed all the zombies in the universe. Their wedding ceremony was precided over by the Space Pope, who subsequenty joined them in a rather spirited threesome.'
-	}
+		  name: 'Zigge zigarett'
+		}
 	];
 
+	$scope.authorSelect = function(authIndex) {
+		console.log("User selected author: ", $scope.bookData[authIndex].author);
+		$scope.selectedAuthor.author = $scope.bookData[authIndex].author;
+		console.log("selectedAuthor: ", $scope.selectedAuthor);
+	}
+
+	$scope.$watch("selectedAuthor", function(newVal, oldVal) {
+		console.log("selectedAuthor changed from ", oldVal, " to ", newVal);
+	})
+
+
+
+	$scope.selectedGenre = {};
+
+	$scope.genreSelect = function(genreIndex) {
+		console.log("User selected genre: ", $scope.bookData[genreIndex].genre);
+		$scope.selectedGenre.genre = $scope.bookData[genreIndex].genre;
+		console.log("selectedGenre: ", $scope.selectedGenre);
+	}
+
+	$scope.$watch("selectedAuthor", function(newVal, oldVal) {
+		console.log("selectedAuthor changed from ", oldVal, " to ", newVal);
+	})
 
 }]);
