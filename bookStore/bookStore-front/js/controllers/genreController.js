@@ -36,16 +36,79 @@ app.controller("genreController2", ["$scope", function($scope){
 
 	$scope.books = [
 	{
-		title: "Oh the things",
-		author: "Derpy McHerpaderp"
+		title: "Harry Potter and the Philisopher´s stone",
+		genre: "Fantasy, Young Adult",
+		author: "JK Rowling"
 	},
 	{
-		title: "Lions, umbrellas and moss - my life among the Gnolls",
-		author: "Sweaty Bootrash"
+		title: "Harry Potter and the Chamber of Secrets",
+		genre: "Fantasy, Young Adult",
+		author: "JK Rowling"
 	},
 	{
-		title: "Potatoes - are they just wierd goose eggs?",
-		author: "Shrilly McWankersham"
+		title: "Harry Potter and the Prisoner of Azkaban",
+		genre: "Fantasy, Young Adult",
+		author: "JK Rowling"
+	},
+	{
+		title: "In cold blood",
+		genre: "True Crime",
+		author: "Truman Capote"
+	},
+	{
+		title: "The stranger beside me",
+		genre: "True Crime",
+		author: "Ann Rule"
+	},
+	{
+		title: "Helter Skelter",
+		genre: "True Crime",
+		author: "Vincent Bugliosi and Curt Gentry"
+	},
+	{
+		title: "The Shining",
+		genre: "Horror",
+		author: "Stephen King"
+	},
+	{
+		title: "Carrie",
+		genre: "Horror",
+		author: "Stephen King"
+	},
+	{
+		title: "Pet cemetary",
+		genre: "Horror",
+		author: "Stephen King"
+	},
+	{
+		title: "The fault in our stars",
+		genre: "Young Adult",
+		author: "John Green"
+	},
+	{
+		title: "The maze runner",
+		genre: "Young Adult",
+		author: "James Dashner"
+	},
+	{
+		title: "Insurgent",
+		genre: "Young Adult",
+		author: "Veronica Roth"
+	},
+	{
+		title: "Pride and Prejudice",
+		genre: "Romance",
+		author: "Jane Austen"
+	},
+	{
+		title: "Beautiful Disaster",
+		genre: "Romance",
+		author: "Jamie McGuire"
+	},
+	{
+		title: "Bared to you",
+		genre: "Romance",
+		author: "Sylvia Day"
 	}
 	];
 

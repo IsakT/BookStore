@@ -14,12 +14,13 @@
 
 <!--			      <p> {{g.bookList}} </p> -->
 
-			      <p ng-repeat="b in books"> <a href="#/bookDetailViewForThisBook"> {{b.title}} </a> </p> 
+			      <p ng-repeat="b in books" ng-if="g.title == b.genre || b.genre.contains(g.title)"> <button type="button" class="secretButton" data-toggle="modal" data-target="#loginModal"> {{b.title}} </button> </p> 
 
 			    </accordion-group>
 
 		  	</accordion>
 
+<div class="modal fade" id="myModal" 
 		</div>
 	</div>
 

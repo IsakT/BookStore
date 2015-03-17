@@ -39,19 +39,6 @@ body {
 /*Centering the menu title*/
 .menu{
 	text-align:center;
-	position: relative;
-}
-.menubtnWrapper {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.menubtnWrapper:after {
-	content:"";
-	display: block;
-	clear: both;
 }
 /*Style and position menu title*/
 .menuTitle{
@@ -73,24 +60,21 @@ body {
 }
 /*Position admin button*/
 .login-button{
-	float: left;
-	margin-top: 2px;
-	display: inline-block;
-	position:absolute;
-	top:-160px;
-	left:0;
+	position:fixed;
+	top:0px;
+	left:0px;
 }
 .logout-button{
-	position:absolute;
-	top:-160px;
-	left:0;
+	position:fixed;
+	top:0px;
+	left:0px;
 }
 /*Position search box*/
 .search{
-	float: right;
-	margin-bottom: 2px;
-	margin-right: 2px;
-	display: inline-block;
+	position:fixed;
+	top:160px;
+	right:0%;
+	max-width:100%;
 }
 /*Set background image for menu*/
 .menu{
@@ -98,17 +82,16 @@ body {
 }
 /*Position social media buttons*/
 .a2a_kit {
-	float: left;
-	margin-bottom: 2px;
-	margin-left: 2px;
-	display: inline-block;
+	position:fixed;
+	left:0%;
+	top:160px;
 }
 
 /*-------------BookView Styling-------------*/
 
 /*Set size of panel inside modal in bookDetails*/
 .panel{
-    width: 60%; 
+    width: 60%; /* respsonsive width */
 }
 /*Position book cover in bookDetailView*/
 .bookCover
@@ -217,7 +200,7 @@ body {
 .homeGenreText {
 	font-style: italic;
 }
-/*---------------- GENRE VIEW -------------------*/
+/*---------------- HOME VIEW -------------------*/
 
 .genreDiv {
   background: transparent;
@@ -236,41 +219,50 @@ body {
 	background: #99CCFF;
 }
 
-
-/* -------------- ADD VIEW -------------------*/
-.scrollable-menu {
-    height: auto;
-    max-height: 200px;
-    overflow-x: hidden;
+.secretButton {
+	background: transparent;
+	background-color: transparent;
 }
 
+<a href="#" class="myButton">white</a>
 
-/*---------------- AUTHOR VIEW -------------------*/
-
-.authorDiv {
-  background: transparent;
-  background-color: transparent;
-  float:left;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  width: 100%; 
-  display:block;
-  background: white;
-  border :1px solid #BEBFBF;
-  padding: 10px;
-  border-radius: 10px;
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
 }
-
-.authorAccordion {
-	width: 100%;
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
 }
-.authorAccordion a {
-	width:100%;
-	display:block;
+.myButton:active {
+	position:relative;
+	top:1px;
 }
-
-
