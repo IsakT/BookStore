@@ -87,10 +87,9 @@ body {
 }
 /*Position search box*/
 .search{
-	position:fixed;
 	float: right;
 	margin-bottom: 2px;
-	margin-right: 2px;
+	margin-left: 2px;
 	display: inline-block;
 }
 /*Set background image for menu*/
