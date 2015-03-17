@@ -1,11 +1,10 @@
 <div class="container-fluid col-lg-5">
 
   <h2>Please enter book credentials<h2>
-  <div class="input-group">
-      <input type="text" ng-model="callAuthor" placeholder="Author" class="form-control" aria-label="...">
+  <div class="input-group form-group">
+      <input type="text"  placeholder="Author" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing <span class="caret"></span>
-        </button>
+        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
        <ul class="dropdown-menu dropdown-menu-right" role="menu">
           <li><a href="#">author</a></li>
           <li><a href="#">author</a></li>
@@ -17,25 +16,26 @@
 
 
 <!--- ng-modeö="callTitle" for controller -->
-    <div class="input-group">
-      <input type="text" ng-model="callTitle" placeholder="Title" class="form-control" aria-label="...">
+    <div class="input-group form-group">
+      <input type="text" placeholder="Title" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href="#">title</a></li>
-          <li><a href="#">title</a></li>
-          <li><a href="#">title</a></li>
+        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu" ng-controller="addController">
+
+          <p ng-repeat="b in books"> <a href="#/bookDetailViewForThisBook"> {{b.title}} </a> </p> 
+          <li ng-repeat="a in forfattare"><a>{{a.name}}</a></li>
+          
+
         </ul>
       </div><!-- /btn-group -->
     </div><!-- /input-group -->
 
 
 
-<div class="input-group">
-      <input type="text" ng-model="callGenre" placeholder="Genre" class="form-control" aria-label="...">
+<div class="input-group form-group">
+      <input type="text" placeholder="Genre" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing <span class="caret"></span></button>
+        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
           <li><a href="#">genre</a></li>
           <li><a href="#">genre</a></li>
@@ -49,11 +49,11 @@
 
 
     <div class="form-group marg">
-        <input id="isbn" class="form-control" ng-model="callISBN" type="text" placeholder="ISBN">
+        <input id="isbn" class="form-control" type="text" placeholder="ISBN">
       </div>
 
     <div class="form-group marg">
-     <textarea class="form-control" id="data" rows="5" ng-model="callData" placeholder="Add book description here..."></textarea>
+     <textarea class="form-control" id="data" rows="5" placeholder="Add book description here..."></textarea>
      </div>
 
 
