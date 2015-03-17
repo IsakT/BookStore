@@ -142,6 +142,10 @@
 	float: right;
     color: #1E2727;
 }
+
+.homeGenreText {
+	font-style: italic;
+}
 /*---------------- HOME VIEW -------------------*/
 
 .genreDiv {
