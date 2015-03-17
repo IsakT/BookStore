@@ -214,7 +214,7 @@ body {
 .homeGenreText {
 	font-style: italic;
 }
-/*---------------- HOME VIEW -------------------*/
+/*---------------- GENRE VIEW -------------------*/
 
 .genreDiv {
   background: transparent;
@@ -233,10 +233,38 @@ body {
 	background: #99CCFF;
 }
 
+
 /* -------------- ADD VIEW -------------------*/
 .scrollable-menu {
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
 }
+
+
+/*---------------- AUTHOR VIEW -------------------*/
+
+.authorDiv {
+  background: transparent;
+  background-color: transparent;
+  float:left;
+  position: relative;
+  width: 100%; 
+  display:block;
+  background: white;
+  border :1px solid #BEBFBF;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.authorAccordion {
+	width: 100%;
+	background: white;
+}
+
+.authorAccordion a {
+	width:100%;
+	display:block;
+}
+
 

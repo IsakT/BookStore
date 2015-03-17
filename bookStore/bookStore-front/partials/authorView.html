@@ -1,15 +1,15 @@
 <div class="container">
-	<h2>Authors:</h2>
+	<br />
 	<div class="authorDiv">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0" ng-controller="authorController">
-
 			<accordion >
-			   <accordion-group heading={{book.author}} ng-repeat="book in bookData" class="authorAccordion">
-			   		<p><b>Böcker skrivna av: {{book.author}}</b></p>
-			      <p><b>Title: {{book.title}}</b></p>
-			      <p><b>Description</b></p>
-			      <p>{{book.description}}</p>
-			    </accordion-group>
+				<h2>Authors:</h2>
+			  <accordion-group heading={{book.author}} ng-repeat="book in bookData" class="authorAccordion">
+			   	<p><b>Böcker skrivna av: {{book.author}}</b></p>
+			    <p><b>Title: {{book.title}}</b></p>
+			    <p><b>Description</b></p>
+			    <p>{{book.description}}</p>
+			   </accordion-group>
 		  	</accordion>
 		</div>
 	</div>
