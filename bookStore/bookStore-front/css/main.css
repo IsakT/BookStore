@@ -251,6 +251,8 @@ body {
   background: transparent;
   background-color: transparent;
   float:left;
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: relative;
   width: 100%; 
   display:block;
@@ -262,9 +264,10 @@ body {
 
 .authorAccordion {
 	width: 100%;
-	background: white;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
 }
-
 .authorAccordion a {
 	width:100%;
 	display:block;
