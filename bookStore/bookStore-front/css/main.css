@@ -3,6 +3,14 @@
 	margin-left: auto;
 	margin-right: auto;
 }*/
+/*Set background for the body*/
+body { 
+  background: url("img/bookViewBackground2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 /*Centering the navbar*/
 .center.navbar .nav {
 	float:none;
@@ -51,7 +59,12 @@
 	font-size:20px;
 }
 /*Position admin button*/
-.btn-success{
+.login-button{
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+.logout-button{
 	position:fixed;
 	top:0px;
 	left:0px;
@@ -73,15 +86,56 @@
 	left:0%;
 	top:160px;
 }
+
+/*-------------BookView Styling-------------*/
+
 /*Set size of panel inside modal in bookDetails*/
 .panel{
     width: 60%; /* respsonsive width */
 }
+/*Position book cover in bookDetailView*/
 .bookCover
 {
 	position:fixed;
 	right:1%;
 }
+/*Position the panel in bookView*/
+.center-panel{
+	position:relative;
+	width:100%;
+}
+/*Position Save button in bookEditView*/
+.saveButton{
+	position:right100%;
+}
+/*Position username textbox in loginView*/
+.username{
+	margin-bottom: 30px;
+	width:300px;
+	margin-left: 134px
+}
+/*Position password textbox in loginView*/
+.password{
+	width:300px;
+	margin-left: 134px
+}
+/*Style the heading for the bookView Panel*/
+.bookHeading{
+	text-align: center;
+	font-family: 'Arizonia', cursive;
+	font-size: 40px;
+}
+/*Style the th in bookView*/
+.bookTable > thead > tr > th{
+	font-family: 'Ceviche One', cursive;
+	font-size: 30px;
+}
+/*Style the td in bookView*/
+.bookTable > tbody > tr > td{
+	font-family: serif;
+	font-size: 16px;
+}
+
 
 
 /*---------------- HOME VIEW -------------------*/

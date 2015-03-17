@@ -1,82 +1,92 @@
-<div class="container">
+<div class="container bookView">
 	<section class="row">
-  		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
-  			<div class="center-panel panel panel-default">
+  		<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+  			<div class="center-panel panel panel-default bookViewPanel">
 			  <!-- Default panel contents -->
-			  <div class="panel-heading"><strong>Books</strong></div>
+			  <div class="panel-heading bookHeading"><strong>Books</strong></div>
 			  <!-- Table -->
-			  <table class="table">
+			  <table class="table bookTable">
 			    	<thead>
 			    		<tr>
 			    			<th>Title</th>
 			    			<th>Author</th>
 			    			<th>Genre</th>
 			    			<th>Year</th>
-			    			<th>Details</th>
 			    			<th>ISBN</th>
+			    			<th>Details</th>
 			    			
 			    		</tr>
 			    	</thead>
 			    	<tbody>
-			    		<tr ng-repeat="book in books">
+			    		<tr ng-repeat="book in bookData">
 			    			<td>{{book.title}}</td>
 			    			<td>{{book.author}}</td>
 			    			<td>{{book.genre}}</td>
 			    			<td>{{book.year}}</td>
 			    			<td>{{book.isbn}}</td>
-			    			<td><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			    			<td><button type="button" id="{{book.id}}" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
 			  						Book Details
 								</button>
 							</td>
 			    		</tr>
 			    	</tbody>
 			  </table>
-			 </div> 
+			 <!--<div>--> 
 			<div>
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">Book Name</h4>
+			        <h4 class="modal-title" id="myModalLabel" ng-repeat="book in bookData" ng-if="book.id == bookId">{{book.title}}</h4>
 			      </div>
 			      <div class="modal-body">
-			      	<div class="bookCover">
-			      		<img src="css/img/book.jpg" class="img-responsive" alt="Responsive image">
+			      	<div class="bookCover" ng-repeat="book in bookData" ng-if="book.id == bookId">
+			      		<img ng-src="{{book.cover}}" class="img-responsive" alt="Responsive image">
 			      	</div>
 			        <div class="panel panel-default">
-			  			<div class="panel-body">
-			    			<ul class="list-group">
-							  <li class="list-group-item">Author: <span class="badge">Yuval Noah Harari </span>
+			  			<div class="panel-body" ng-hide="showDetailWindow">
+			    			<ul class="list-group" ng-repeat="book in bookData" ng-if="book.id == bookId">
+							  <li class="list-group-item">Author: <span class="badge">{{book.author}}</span>
 							  </li>
-							  <li class="list-group-item">Published: <span class="badge">2015-02-23</span>
+							  <li class="list-group-item">Published: <span class="badge">{{book.year}}</span>
 							  </li>
-							  <li class="list-group-item">Genre: <span class="badge">Historia & arkeologi</span>
+							  <li class="list-group-item">Genre: <span class="badge">{{book.genre}}</span>
 							  </li>
-							  <li class="list-group-item">ISBN: <span class="badge"> 9789127140394</span>
+							  <li class="list-group-item">ISBN: <span class="badge"> {{book.isbn}}</span>
 							  </li>
 							</ul>
 			  			</div>
-			  			<a href="">edit</a>
+			  			<div class="panel-body" ng-show="editBookView">
+			    			<ul class="list-group" ng-repeat="book in bookData" ng-if="book.id == bookId">
+							  <li class="list-group-item">Author: <input type="text" class="form-control" ng-model="book.author">
+							  </li>
+							  <li class="list-group-item">Published: <input type="text" class="form-control" ng-model="book.year">
+							  </li>
+							  <li class="list-group-item">Genre: <input type="text" class="form-control" ng-model="book.genre">
+							  </li>
+							  <li class="list-group-item">ISBN: <input type="text" class="form-control" ng-model="book.isbn">
+							  </li>
+							</ul>
+							<a class="saveButton" href="" ng-show="showSave" ng-click="saveData()">save</a>
+			  			</div>
+			  			<a href="" ng-show="showEdit" ng-click="editBook()">edit</a>
 					</div>
 					<div class="panel panel-default">
-			  			<div class="panel-body">
-			  				<a href="">edit</a>
-			    			<p>
-								Sapiens är en storslagen berättelse om människans ursprung, nutid och framtid. Historikern Yuval Noah Harari tar oss med från Homo sapiens första steg på jorden, då vi var ett däggdjur bland alla andra, till idag när vi står som världens obestridda härskare - med makt att både skapa och utplåna liv.
-								<div ng-show="more">
-								<p>För cirka 70 000 år sedan var jorden befolkad av minst sex olika mänskliga arter. Ingen av dem hade någon större inverkan på den globala ekologin. Idag har bara en art överlevt - Homo sapiens. Hur blev det så? En del av hemligheten bakom framgångarna är att vi är det enda djur som kan prata om saker som existerar enbart i vår egen fantasi, såsom gudar, nationer, pengar och mänskliga rättigheter. Om detta och mycket mer handlar denna internationella bästsäljare som ger nytt bränsle åt diskussionen om vårt gemensamma förflutna och planetens framtid.
-
-								Professor Yuval Noah Harari (född 1976) är verksam vid Hebreiska universitetet i Jerusalem och slutförde sin doktorsavhandling vid University of Oxford. Hans specialområde är världens historia och makrohistoriska processer. Harari har publicerat ett flertal böcker och artiklar och
-								hans filmade föreläsningar om världens historia har blivit en stor succé på Youtube.</p>
+			  			<div class="panel-body" ng-repeat="book in bookData" ng-if="book.id == bookId">
+			  				<a href="" ng-show="showTxtEdit">edit</a>
+			    			<p ng-hide="summary">{{book.description | limitTo: 150}}</p>
+							<p ng-show="more">{{book.description}}</p>	
 								</div><a href="" ng-click="readMore()">read more</a>					
 								<div class="collapse" id="collapseExample">
 								  <div class="well">
 								    ...
 								  </div>
-								</div>
 							</p>
 			  			</div>
+			  			<div class="form-group marg" ng-repeat="book in bookData" ng-if="book.id == bookId" ng-show="showEditDescriptionWindow">
+						     <textarea class="form-control" id="data" rows="5" ng-model="editDescription" placeholder="Add book description here...">{{book.description}}</textarea>
+						 </div>
 					</div>
 			      </div>
 			      <div class="modal-footer">
@@ -84,6 +94,7 @@
 			      </div>
 			    </div>
 			  </div>
+			</div>
 			</div>
 			</div>
 		 </div>
