@@ -39,6 +39,19 @@ body {
 /*Centering the menu title*/
 .menu{
 	text-align:center;
+	position: relative;
+}
+.menubtnWrapper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.menubtnWrapper:after {
+	content:"";
+	display: block;
+	clear: both;
 }
 /*Style and position menu title*/
 .menuTitle{
@@ -60,21 +73,25 @@ body {
 }
 /*Position admin button*/
 .login-button{
-	position:fixed;
-	top:0px;
-	left:0px;
+	float: left;
+	margin-top: 2px;
+	display: inline-block;
+	position:absolute;
+	top:-158px;
+	left:0;
 }
 .logout-button{
-	position:fixed;
-	top:0px;
-	left:0px;
+	position:absolute;
+	top:-158px;
+	left:0;
 }
 /*Position search box*/
 .search{
 	position:fixed;
-	top:160px;
-	right:0%;
-	max-width:100%;
+	float: right;
+	margin-bottom: 2px;
+	margin-right: 2px;
+	display: inline-block;
 }
 /*Set background image for menu*/
 .menu{
@@ -82,16 +99,17 @@ body {
 }
 /*Position social media buttons*/
 .a2a_kit {
-	position:fixed;
-	left:0%;
-	top:160px;
+	float: left;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	display: inline-block;
 }
 
 /*-------------BookView Styling-------------*/
 
 /*Set size of panel inside modal in bookDetails*/
 .panel{
-    width: 60%; /* respsonsive width */
+    width: 60%; 
 }
 /*Position book cover in bookDetailView*/
 .bookCover
@@ -200,7 +218,7 @@ body {
 .homeGenreText {
 	font-style: italic;
 }
-/*---------------- HOME VIEW -------------------*/
+/*---------------- GENRE VIEW -------------------*/
 
 .genreDiv {
   background: transparent;
@@ -218,6 +236,17 @@ body {
 	width: 800px;
 	background: #99CCFF;
 }
+
+
+/* -------------- ADD VIEW -------------------*/
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+
+/*---------------- AUTHOR VIEW -------------------*/
 
 .secretButton {
 	background: transparent;
@@ -265,4 +294,28 @@ body {
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+/*---------------- AUTHOR VIEW -------------------*/
+
+.authorDiv {
+  background: transparent;
+  background-color: transparent;
+  float:left;
+  position: relative;
+  width: 100%; 
+  display:block;
+  background: white;
+  border :1px solid #BEBFBF;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.authorAccordion {
+	width: 100%;
+	background: white;
+}
+
+.authorAccordion a {
+	width:100%;
+	display:block;
 }
