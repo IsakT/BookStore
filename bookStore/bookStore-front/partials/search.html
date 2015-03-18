@@ -1,27 +1,20 @@
-<div ng-controller="searchController">
+<div>
 	<table>
     <tr>
     	<td align="right"></td>
     	<td>
-    		<input ng-model="query[queryBy]" type="text" class="form-control" placeholder="Search"/>
-    		<select ng-model="orderProp" placeholder="Sort:">
-    			<option>
-    				Genre
-    			</option>
-    			<option>
-    				Author
-    			</option>
-    			<option>
-    				Title
-    			</option>
+    		<input ng-model="query[sortBy]" type="text" class="form-control" placeholder="Search"/>
+            <!--  value="{{option | lowercase}}" -->
+    		<select ng-model="sortBy" class="form-control">
+    			<option ng-repeat="option in filterOptions">{{option}}</option>
     		</select>
     	</td>
     </tr>           
     <hr>
-    <div ng-show="!searchFilterResult">
-			<ul class="list-group">
+    <div ng-if="searchFilterResult && query[sortBy]">
+			<ul class="list-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
 				<li class="list-group-item" ng-repeat="data in bookData | filter:query as searchFilterResult">
-					<p>Author: {{data.author}}</p>	
+					<p>Author: {{data.author}}</p>
 					<p>Title: {{data.title}}</p>
 					<p>Genre: {{data.genre}}</p>
 				</li>
