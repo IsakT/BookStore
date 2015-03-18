@@ -1,0 +1,30 @@
+<div ng-controller="searchController">
+	<table>
+    <tr>
+    	<td align="right"></td>
+    	<td>
+    		<input ng-model="query[queryBy]" type="text" class="form-control" placeholder="Search"/>
+    		<select ng-model="orderProp" placeholder="Sort:">
+    			<option>
+    				Genre
+    			</option>
+    			<option>
+    				Author
+    			</option>
+    			<option>
+    				Title
+    			</option>
+    		</select>
+    	</td>
+    </tr>           
+    <hr>
+    <div ng-show="!searchFilterResult">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="data in bookData | filter:query as searchFilterResult">
+					<p>Author: {{data.author}}</p>	
+					<p>Title: {{data.title}}</p>
+					<p>Genre: {{data.genre}}</p>
+				</li>
+			</ul>
+    </div>
+</div>

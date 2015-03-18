@@ -15,6 +15,8 @@ var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"])
 						  controller: "authorDetailController"}).
 			when("/bookDetails", {templateUrl: "partials/bookDetailView.html",
 						  controller: "bookDetailController"}).
+			when("/search", {templateUrl: "partials/search.html",
+						  controller: "searchController"}).
 			otherwise({
 				redirectTo: "/home"
 			});
