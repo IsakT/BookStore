@@ -1,4 +1,4 @@
-var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap"]).
+var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"]).
 	config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider){
 		$routeProvider.
 			when("/home", {templateUrl:"partials/homeView.html",

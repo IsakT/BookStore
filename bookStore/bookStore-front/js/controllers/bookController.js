@@ -1,4 +1,4 @@
-app.controller("bookController", ["$http", "$scope", function($http, $scope){
+app.controller("bookController", ["$http", "$scope", "book", function($http, $scope, book){
 	
 	$http
 		.get("data/bookData.json")
