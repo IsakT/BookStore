@@ -4,9 +4,16 @@
   <h2>Please enter book credentials<h2>
 
     <!--- ng-modeö="callTitle" for controller -->
-    <div class="form-group marg">
-        <input id="isbn" class="form-control" type="text" placeholder="Title">
-      </div>
+  <div class="input-group form-group" ng-controller="addController">
+      <input type="text"  placeholder="Title" ng-model="selectedTitle.title" class="form-control" aria-label="...">
+      <div class="input-group-btn" dropdown>
+        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+       <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+          <li ng-repeat="title in bookData">
+            <a href="" ng-click="authorSelect($index)">{{title.title}}</a></li>
+       </ul>
+      </div><!-- /btn-group -->
+  </div><!-- /input-group -->
 
 
       
@@ -20,9 +27,6 @@
        </ul>
       </div><!-- /btn-group -->
   </div><!-- /input-group -->
-
-
-
 
 
 
@@ -54,7 +58,7 @@
 
 
 <button type="add" class="btn btn-default">Add to database</button>
-
+<button type="remove" class="btn btn-default">Remove from database</button>
 </div> 
 </div>
 
