@@ -1,7 +1,11 @@
-app.controller("menuController", ["$scope", "$rootScope", function($scope, $rootScope){
+app.controller("menuController", ["$scope", "$rootScope", "$location", function($scope, $rootScope, $location){
 	
 
 	var loggedIn;
+
+	$scope.goTo = function(path) {
+		$location.url(path);
+	}
 
 	$scope.logIn = function(userName,password){
 		if(userName == null && password == null){

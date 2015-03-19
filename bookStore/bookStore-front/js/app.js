@@ -1,4 +1,4 @@
-var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap"]).
+var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"]).
 	config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider){
 		$routeProvider.
 			when("/home", {templateUrl:"partials/homeView.html",
@@ -15,6 +15,8 @@ var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap"]).
 						  controller: "authorDetailController"}).
 			when("/bookDetails", {templateUrl: "partials/bookDetailView.html",
 						  controller: "bookDetailController"}).
+			when("/search", {templateUrl: "partials/search.html",
+						  controller: "searchController"}).
 			otherwise({
 				redirectTo: "/home"
 			});
