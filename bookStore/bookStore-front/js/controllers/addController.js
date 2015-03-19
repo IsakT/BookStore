@@ -1,5 +1,22 @@
 app.controller("addController", ["$scope", "$http", function($scope, $http){
 	console.log("Controller is working");
+	$scope.newBookData = {};
+
+	$scope.formTitle = "Please enter book credentials";
+	$scope.saveBtnText = "Add to database";
+
+	$scope.canDelete = false;
+
+	//$http.post("someurl", $scope.newBookData);
+
+	$scope.save = function() {
+		//i do nothing yet....
+		console.log("newBookData: ", $scope.newBookData);
+	};
+
+	$scope.delete = function() {
+		//i do nothing yet....
+	};
 
 	$http
 		.get("data/bookData.json")
@@ -8,11 +25,10 @@ app.controller("addController", ["$scope", "$http", function($scope, $http){
 			$scope.bookData = data;
 		});
 
-	$scope.selectedAuthor = {};
 	$scope.authorSelect = function(authIndex) {
 		console.log("User selected author: ", $scope.bookData[authIndex].author);
-		$scope.selectedAuthor.author = $scope.bookData[authIndex].author;
-		console.log("selectedAuthor: ", $scope.selectedAuthor);
+		$scope.newBookData.author = $scope.bookData[authIndex].author;
+		console.log("selectedAuthor: ", $scope.newBookData.author);
 	}
 
 	$scope.$watch("selectedAuthor", function(newVal, oldVal) {
@@ -20,23 +36,20 @@ app.controller("addController", ["$scope", "$http", function($scope, $http){
 	})
 
 
-
-	$scope.selectedGenre = {};
 	$scope.genreSelect = function(genreIndex) {
 		console.log("User selected genre: ", $scope.bookData[genreIndex].genre);
-		$scope.selectedGenre.genre = $scope.bookData[genreIndex].genre;
-		console.log("selectedGenre: ", $scope.selectedGenre);
+		$scope.newBookData.genre = $scope.bookData[genreIndex].genre;
+		console.log("selectedGenre: ", $scope.newBookData.genre);
 	}
 
 	$scope.$watch("selectedAuthor", function(newVal, oldVal) {
 		console.log("selectedAuthor changed from ", oldVal, " to ", newVal);
 	})
 
-	$scope.selectedTitle = {};
-	$scope.genreSelect = function(genreIndex) {
-		console.log("User selected genre: ", $scope.bookData[tileIndex].title);
-		$scope.selectedTitle.title = $scope.bookData[titleIndex].title;
-		console.log("selectedTitle: ", $scope.selectedTitle);
+	$scope.titleSelect = function(titleIndex) {
+		console.log("User selected genre: ", $scope.bookData[titleIndex].title);
+		$scope.newBookData.title = $scope.bookData[titleIndex].title;
+		console.log("selectedTitle: ", $scope.newBookData.title);
 	}
 
 	$scope.$watch("selectedAuthor", function(newVal, oldVal) {
