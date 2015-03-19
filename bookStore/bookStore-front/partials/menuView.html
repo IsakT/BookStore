@@ -14,21 +14,21 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#/home">Home</a></li>
-          <li><a href="#/authors">Authors</a></li>
-          <li><a href="#/books">Books</a></li>
-          <li><a href="#/genres">Genres</a></li>
-          <li><a href="#/add" ng-show="showAdd">Add</a></li>
+          <li><a  class="menuFont" href="#/home">Home</a></li>
+          <li><a  class="menuFont" href="#/authors">Authors</a></li>
+          <li><a  class="menuFont"href="#/books">Books</a></li>
+          <li><a  class="menuFont"href="#/genres">Genres</a></li>
+          <li><a  class="menuFont"href="#/add" ng-show="showAdd">Add</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav><!-- /.container-fluid -->
   </nav>
   <div class="container">
-    <div class="menuTitle"><p>Book Store</p></div>
+    <div class="menuTitle"><p class="title">hoeBag [buuk stohr]</p></div>
     <div class="menubtnWrapper">
       <div class="search"><input type="text" class="form-control" placeholder="Search"></div> 
-      <button type="button" class="btn btn-success btn-xs login-button" ng-hide="hideLogIn" data-toggle="modal" data-target="#loginModal">Log in</button>
-      <button type="button" class="btn btn-success btn-xs logout-button" ng-show="showLogOut" ng-click="logOut()">Log out</button>
+      <button type="button" class="btn btn-success login-button" ng-hide="hideLogIn" data-toggle="modal" data-target="#loginModal">Log in</button>
+      <button type="button" class="btn btn-success logout-button" ng-show="showLogOut" ng-click="logOut()">Log out</button>
       <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
           <a class="a2a_dd" href="https://www.addtoany.com/share_save"></a>
           <a class="a2a_button_facebook"></a>
@@ -53,7 +53,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success btn-xs modal-button" data-dismiss="modal" ng-hide="hideLogIn" ng-click="logIn(userNameInput,passwordInput)">Log in</button>
+              <button type="button" class="btn btn-success modal-button" data-dismiss="modal" ng-hide="hideLogIn" ng-click="logIn(userNameInput,passwordInput)">Log in</button>
             </div>
           </div>
         </div>

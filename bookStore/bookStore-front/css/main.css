@@ -1,3 +1,41 @@
+/*-----------------FONTS-----------------------*/
+
+.bookTable > tbody > tr > td, .bookTable > thead > tr > th, p, h1, h2, h3, h4, h5, a, .modal-title{
+  font-family: 'Lekton', sans-serif;
+}
+
+.bookTable > thead > tr > th {
+  font-size: 30px;
+}
+
+.bookTable > tbody > tr > td{
+  font-size: 16px;
+  vertical-align: text-bottom;
+}
+
+.menuFont, .title, .partialTitle {
+  font-family: 'Stint Ultra Condensed', cursive;
+}
+
+.title { /*hoeBag [buuk stohr]*/
+  font-size: 80px;
+}
+
+.partialTitle { /*Authors: Books: Genres: Our top three:*/
+  font-size: 60px;
+  text-align: center;
+  background-image: url("img/bl2.jpg");
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.homeLink{
+  color: black;
+}
+.homeLink:hover {
+  color: white;
+}
+
 /*Used for centering the navbar*/
 /*.center {
 	margin-left: auto;
@@ -5,7 +43,7 @@
 }*/
 /*Set background for the body*/
 body { 
-  background: url("img/bookViewBackground2.jpg") no-repeat center center fixed; 
+  background: gray;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,10 +60,11 @@ body {
 /*Changing style of navbar li*/
 .navbar-inverse .navbar-nav > li {
 	 color:white;
-	 font-family: 'Stint Ultra Condensed', cursive;
+
 	 font-size:30px;
 	 width:100px;
 }
+
 /*Underline all links on hover*/
 .navbar-inverse .navbar-nav > li > a:hover {
 	 color:gray;
@@ -66,11 +105,7 @@ body {
   color : gray;
 }
 /*Styling admin button*/
-.btn-success {
-	color:black;
-	font-family:'Stint Ultra Condensed', cursive;
-	font-size:20px;
-}
+
 /*Position admin button*/
 .login-button{
 	float: left;
@@ -136,22 +171,9 @@ body {
 	width:300px;
 	margin-left: 134px
 }
-/*Style the heading for the bookView Panel*/
-.bookHeading{
-	text-align: center;
-	font-family: 'Arizonia', cursive;
-	font-size: 40px;
-}
-/*Style the th in bookView*/
-.bookTable > thead > tr > th{
-	font-family: 'Ceviche One', cursive;
-	font-size: 30px;
-}
-/*Style the td in bookView*/
-.bookTable > tbody > tr > td{
-	font-family: serif;
-	font-size: 16px;
-}
+
+/*-----------BUTTONS----------------*/
+
 
 
 
@@ -170,12 +192,16 @@ body {
   border :1px solid #BEBFBF;
   padding: 10px;
   border-radius: 10px;
+  color: black;
 }
 
 .homeDiv, .homeDiv__body {
   overflow:hidden;
   _overflow:visible;
   zoom:1;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .homeBookCoverImage{
@@ -187,7 +213,7 @@ body {
 
 .homeBookDetails{ /*Title, author, publishing year */
 	padding: 5px;
-	background-color: #4C6161;	
+	background: linear-gradient(#3A3A3A, #B0B0B0);
 	border-radius: 10px;
 	border-color: black;
 	width: 100%;
@@ -203,7 +229,7 @@ body {
 	padding: 10px;
 	border: 1px solid;
 	border-radius: 10px;
-	background-color: #99C2C2;
+	background-color: white;
 	width: 100%;
 	word-wrap: break-word;
 }
@@ -211,156 +237,39 @@ body {
 .homeReadMore{
 	text-align: right;
 	float: right;
-    color: #1E2727;
+  color: #1E2727;
 }
 
 .homeGenreText {
 	font-style: italic;
 }
-/*---------------- GENRE VIEW -------------------*/
-
-.genreDiv {
-  background: transparent;
-  background-color: transparent;
-  float:left;
-  display:block;
-  width: auto; 
-  background: #E5E5E5;
-  border :1px solid #BEBFBF;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.genreAccordion {
-	width: 800px;
-	background: #99CCFF;
-}
-
-/*---------------- Sexy buttons -------------------*/
 
 
-.bookButton {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 9px 20px;
-    border: 1px solid #3a762a;
-    border-radius: 16px;
-    background: #5ebf45;
-    background: -webkit-gradient(linear, left top, left bottom, from(#5ebf45), to(#3a762a));
-    background: -moz-linear-gradient(top, #5ebf45, #3a762a);
-    background: linear-gradient(to bottom, #5ebf45, #3a762a);
-    -webkit-box-shadow: #56b040 0px 0px 3px 3px;
-    -moz-box-shadow: #56b040 0px 0px 3px 3px;
-    box-shadow: #56b040 0px 0px 3px 3px;
-    text-shadow: #244a1b 1px 1px 1px;
-    font: normal normal bold 13px arial;
-    color: #ffffff;
-    text-decoration: none;
-}
-.bookButton:hover,
-.bookButton:focus {
-    border: 1px solid ##489335;
-    background: #71e553;
-    background: -webkit-gradient(linear, left top, left bottom, from(#71e553), to(#468e32));
-    background: -moz-linear-gradient(top, #71e553, #468e32);
-    background: linear-gradient(to bottom, #71e553, #468e32);
-    color: #ffffff;
-    text-decoration: none;
-}
-.bookButton:active {
-    background: #3a762a;
-    background: -webkit-gradient(linear, left top, left bottom, from(#3a762a), to(#3a762a));
-    background: -moz-linear-gradient(top, #3a762a, #3a762a);
-    background: linear-gradient(to bottom, #3a762a, #3a762a);
-}
-.bookButton:before{
-    content:  "\0000a0";
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    line-height: 24px;
-    margin: 0 4px -6px -4px;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEbElEQVRIicWVTWwUZRjHfzM7OzO7ZdvabTe03ZS2EYJcFoxBJESDQGIIxFg/A4ImksYeTCQkJhq5+BEPNl5MCIkchFY0IR4bhV781hQ3mFSwUmlKQVps7XY/ursz8847Hma2Xcoi3nySN5PMvPP//f/PPDMD/1OpwBbgW8D7DysTrGngGvAaEAVQ7gBoW98Z/vObzw9h5y8jnQU8kce2yxSKkkJRsljybrspYiqMTzl8MJjl0oSdAi5rdwCcHD6RQooCnrvIzMwM2YJHblGSzbvkFiWW7QMM3fdoGiplSzI1IzB0RQCdwJRaQ7wp0RTaaTQ9hGvNMj97HdsBy/GwbA9bgC2WN1u2f96THtNzLuNTDhfGrJeAIiBrAT4afCcBgLTnsQWULA/H8XDEslh1hUJ+ipLl0dqsSeAkMAkUVwIagZ6NW57CWbxCNjONIwLhIIEjlsUV1ReOGAqT04LzFy3aU0fUg3tiAN2AuRLw/rljrUiRQ1pzS/EdsZzAdZcBnvRQVIWwplCyPKKmwsjICPfvfBv8KdKqAY3AodSDPdIt3ySfrXJvLydYWRX36d8s4p17y8lkkoGBgaXr1YD0+cEknsip0lm4RbQ6wcoKawqW7VFfp5LL5cyjz42RTqcBmgAqY9oJdK/Z8DhueRpRuoEjPGzHn5gKrJb4bMZl5NcyGza/gGEYHBscABDAAqBVAO/+8HE7nlvCWbzKYslDuCy1SLgg3Nv0WRVVmZy2aYypZLNZ+nuvsenJnABO4Y+prQYPY19j4r5JKYp4bumuD7dSsxmX0XELGdtOMpnky6+v2LMZ1wa+AKaAsgYcvfBpkrb1+zqk/Td6bB11bRaeW8JzLVwniyhOgiduEZdOjtHxPL9fdaApzqt70mx6YlYFTgM54AZga4au9KxJ9fHm64fVQkne3od/Kdf10Fc/S0tLC9/9dJbA/VngetAitHiDuq548xyGrpA3e0RLS4vW3d1Ne3s7UkoSiQSRSIS5uTlM00RRFEzTxDAMTNNkeHiYvWtPsLsvYwOfAQVgBrABNOFCITPB2o4wdaE1Wm9vb+DORUo/UTweJ5VKUSwWl9wPDQ0Ri8UYGxsjnr/BxQmbqt4XKvuU7Q+Y3nuvxGmMqVy76fLXvGDzM9/T0NBAOBwGoFQqUS6XCYVCfv+lJBQKcfz4cfp2fMXul9Pl0XHrNHAGGAHmlwD4P5Yf60xl/siBZn1t16piLOrpUd1qNHSFS85Rdu3aRSQSQdd16uvrAejv76erq4tHu4do2/qJLSX7gUvAH5X2VAAA64CHgf3AevzRVd/qa9ab6lU6Wg2paQpGWJgbt/WSr3uRaDSKnDjMYwfPiF8u26dqua8G6IAJ1AOrg+O9wA5gG7AKkH1P36N3tGpax2pNjRqqsESo/PwbU6ZwOVDLfTWgUmoAUvE/I1Eggf9dSQKPAFsDEzIQ+xD4OXC/sELvjv/kaqAewLQA3hwAo8GeMjCB/2KJlQJ3A9QCalUL/CTlWuIA/wC+TERQJ+LCigAAAABJRU5ErkJggg==") no-repeat left center transparent;
-    background-size: 100% 100%;
-}
+/*---------------- Author, genre, home and book divs -------------------*/
 
-.bookDetailButton {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    padding: 9px 37px;
-    border: 1px solid #3a762a;
-    border-radius: 16px;
-    background: #5ebf45;
-    background: -webkit-gradient(linear, left top, left bottom, from(#5ebf45), to(#3a762a));
-    background: -moz-linear-gradient(top, #5ebf45, #3a762a);
-    background: linear-gradient(to bottom, #5ebf45, #3a762a);
-    -webkit-box-shadow: #56b040 0px 0px 3px 3px;
-    -moz-box-shadow: #56b040 0px 0px 3px 3px;
-    box-shadow: #56b040 0px 0px 3px 3px;
-    text-shadow: #244a1b 1px 1px 1px;
-    font: normal normal bold 20px arial;
-    color: #ffffff;
-    text-decoration: none;
-}
-.bookDetailButton:hover,
-.bookDetailButton:focus {
-    border: 1px solid ##489335;
-    background: #71e553;
-    background: -webkit-gradient(linear, left top, left bottom, from(#71e553), to(#468e32));
-    background: -moz-linear-gradient(top, #71e553, #468e32);
-    background: linear-gradient(to bottom, #71e553, #468e32);
-    color: #ffffff;
-    text-decoration: none;
-}
-.bookDetailButton:active {
-    background: #3a762a;
-    background: -webkit-gradient(linear, left top, left bottom, from(#3a762a), to(#3a762a));
-    background: -moz-linear-gradient(top, #3a762a, #3a762a);
-    background: linear-gradient(to bottom, #3a762a, #3a762a);
-}
-.bookDetailButton:before{
-    content:  "\0000a0";
-    display: inline-block;
-    height: 24px;
-    width: 24px;
-    line-height: 24px;
-    margin: 0 4px -6px -4px;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAEK0lEQVRIid2UT2wUVRzHP+/Nm9nZ2e3sbrtd1hZbCj0AKlQOjQ2GA94kxoMHI/GkMVHjyagHoyYePBk5q9EYPJCYeMHEExYOFAlG5I/8i9AWyr+29M8WttvdmTfvediFgNsYDlz0m7zM5L3M7/Pm9/2+B/91iVVnX/gJP1vsK3T2DBY6/GLgu95sZaU6c+PSSS3SNSfo3pwkWidLV68xf+IaY+/phwJ8COXHpPvFxOdHt725++mN3R2CbMoiJTS04Oexv4zneWZk6zplLcwvW67PN6rzVX3um7HawereT74dOvP15a/gHlDdD8jAa7tUsPvIMxvpL8RYa0k0JICwlsHOFemqWGZkDYBsCOtyIquUN7ymnB2u7Dn7wTj8CLx8t6b8B2DDcipHvsNFG+6N2FjiBBpRjFSK23eqTE/PUG80sBa0NvgKTDqUeRgGvFX/IICehaBImDJERmCMBcA2H8wvVrg8OYHj5liJXEw0R+ALntoyhJ8fpB7kyEC+BYhWa1FpMVOk102IEoW1olXccubUcTy/QFwaJggz9IaSmzN1JsfHmf7lID1PrLCS7mANBM29Um0DpKDndtjNgDRESXPn1lrmZqcRVjCpttLb4xKmLCklWLc+oPT4kxw65LBwZD+h67EBvDyEFZh9wIN3QflQXA67kCRECUQJxEYwNXkJ07kFm1YsrsB8TXBrGW7VYLEu6N+6Cev3cWvmLGmgH4ptHkgo+aBqYRcIQSNpLVgwOsKm0oQO3Klb6gm4spnx2EBiQBV6SWXq+EAXdLYBFJQDoJbNgZRECTRLWBKdkPHBF4K0guXIEiXNI5RSlownqHiWOZXCb3m5Wop6AqAeFkiQRInFthAN6+DGd8iGBdJu89BpAxZwpcCVcHphinHRTwpI39cieR+pnALiMIfGITagWz5k1gwwe/E4wmiyriXvWzrTlq508/3q5XGun/+N7s3PooAsdLcBHCgrIbG5EEMznq34U1o7wPTSClOnDxPXlwkUZD1ByoGJixc4dWAfm4dGsGH+btzbTU5Br5EuKpfFVQIHi0001hoAtm1/jl8P7OfKxb1kCyVwPGZuTFGrzLF9ZARvbIwTdgiDoAPbDvChFEvF9NFzfH/qPFGjjtYJxoJrYzwp0CZCeD6V6iVqSYJ1AwZ0ne6dS2x6tcGx90dJhENgdbHVHXMPYJWKCsWQzw5/ROI4JFKilUI7DrGUREpx2xqkcsm5LoFS+FJilULu+4HM83neeKXA0vk+vCtTWbR+EHBa648nb97UEkoxRDFUIqjUYaEO8w2ozMA0UClDXwbKIfR2QHntMda/3bm0o/hSJ9d2ZPjzO30SMDwqjYA8sM0ZNV/22fofu+yewdynd9fkv334sDoKZvRk8taF0dlq7fdJpqKk/Cjqtul1yc4XJe/QvLL/J/obuJa9WBaa+SAAAAAASUVORK5CYII=") no-repeat left center transparent;
-    background-size: 100% 100%;
-}
-
-
-/*---------------- AUTHOR VIEW -------------------*/
-
-.authorDiv {
-  background: transparent;
-  background-color: transparent;
+.authorDiv, .genreDiv, .homeDiv, .bookDiv{
+  margin-top: 20px;
+  background-color: #E6E6E6;
   float:left;
   position: relative;
   width: 100%; 
   display:block;
-  background: white;
-  border :1px solid #BEBFBF;
+  border :1px solid #313131;
   padding: 10px;
   border-radius: 10px;
 }
 
-.authorAccordion {
+.accordion {
 	width: 100%;
-	background: white;
+  background: white;
 }
 
-.authorAccordion a {
+.accordion a {
 	width:100%;
 	display:block;
+}
+.accordion .panel-heading {
+  background: #B8B8B8;
 }
 
 /* -------------- ADD VIEW -------------------*/
@@ -386,3 +295,13 @@ background: transparent;
   margin-right: auto;
 }
 
+.viewTitles {
+  font-family: 'Times new roman', cursive;
+  font-size: 30px;
+  position:relative;
+  text-align: center;
+  margin:0 auto;
+  color: gray;
+  top:0px;
+  margin-bottom: 20px;
+}
