@@ -250,7 +250,7 @@ body {
 
 /*---------------- Author, genre, home and book divs -------------------*/
 
-.authorDiv, .genreDiv, .homeDiv, .bookDiv{
+.authorDiv, .genreDiv, .homeDiv, .bookDiv, .authorDiv{
   margin-top: 20px;
   background-color: #E6E6E6;
   float:left;
@@ -278,16 +278,13 @@ body {
 /* -------------- ADD VIEW -------------------*/
 .scrollable-menu {
     height: auto;
-    max-height: 200px;
     overflow-x: hidden;
 }
 
 .whiteSurrounding {
-
-background: transparent;
+  background: transparent;
   background-color: transparent;
   position: relative;
-  width: 70%; 
   display:block;
   background: white;
   border :1px solid #BEBFBF;
@@ -330,4 +327,22 @@ ul.rating {
 
 .rating .filled {
   color: green;
+}
+
+/*------------SEARCH-----------------*/
+.search{
+  float: right;
+  position: absolute;
+  margin-bottom: 2px;
+  top: -158px;
+  right: 0;
+}
+
+.login-button{
+  float: left;
+  margin-top: 2px;
+  display: inline-block;
+  position:absolute;
+  top:-158px;
+  left:0;
 }

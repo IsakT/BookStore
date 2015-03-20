@@ -1,114 +1,117 @@
-<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+ <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-<div class="whiteSurrounding"> <!-- Kims CSS-koppling -->
-  <h2>{{formTitle}}<h2>
-
-
-<div class="btn-group input-group form-group" dropdown is-open="status.isopen">
-      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
-        Add/remove books
-      </button>
-      <ul class="dropdown-menu" role="menu">
-       <li><a href="" ng-click="goTos('/addAuthor')">Add/remove authors</a></li>
-        <li><a href="#">Add/remove genres</a></li>
-      </ul>
-    </div>
+    <div class="authorDiv"> <!-- Kims CSS-koppling -->
+      <h2>{{formTitle}}<h2>
 
 
+    <div class="btn-group input-group form-group" dropdown is-open="status.isopen">
+          <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+            Add/remove books
+          </button>
+          <ul class="dropdown-menu" role="menu">
+           <li><a href="" ng-click="goTos('/addAuthor')">Add/remove authors</a></li>
+            <li><a href="#">Add/remove genres</a></li>
+          </ul>
+        </div>
 
 
-    <!--- ng-modeö="callTitle" for controller -->
-  <div class="input-group form-group">
-      <input type="text"  placeholder="Title" ng-model="newBookData.title" class="form-control" aria-label="...">
-      <div class="input-group-btn" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
-       <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
-          <li ng-repeat="title in bookData | orderBy: 'title' ">
-            <a href="" ng-click="titleSelect($index)">{{title.title}}</a></li>
-       </ul>
-      </div><!-- /btn-group -->
-  </div><!-- /input-group -->
 
+
+        <!--- ng-modeö="callTitle" for controller -->
+      <div class="input-group form-group">
+          <input type="text"  placeholder="Title" ng-model="newBookData.title" class="form-control" aria-label="...">
+          <div class="input-group-btn" dropdown>
+            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+           <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+              <li ng-repeat="title in bookData | orderBy: 'title' ">
+                <a href="" ng-click="titleSelect($index)">{{title.title}}</a></li>
+           </ul>
+          </div><!-- /btn-group -->
+      </div><!-- /input-group -->
+
+
+          
+      <div class="input-group form-group">
+          <input type="text"  placeholder="Author" ng-model="newBookData.author" class="form-control" aria-label="...">
+          <div class="input-group-btn" dropdown>
+            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+           <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+              <li ng-repeat="author in bookData | orderBy: 'author'">
+                <a href="" ng-click="authorSelect($index)">{{author.author}}</a></li>
+           </ul>
+          </div><!-- /btn-group -->
+      </div><!-- /input-group -->
+
+
+
+
+    <div class="input-group form-group">
+          <input type="text" placeholder="Genre" ng-model="newBookData.genre" class="form-control" aria-label="...">
+          <div class="input-group-btn" dropdown>
+            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+            <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+              <li ng-repeat="genre in bookData | orderBy: 'genre'">
+                <a href="" ng-click="genreSelect($index)">{{genre.genre}}</a></li>
+           </ul>
+          </div><!-- /btn-group -->
+      </div><!-- /input-group -->
+        
 
       
-  <div class="input-group form-group">
-      <input type="text"  placeholder="Author" ng-model="newBookData.author" class="form-control" aria-label="...">
-      <div class="input-group-btn" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
-       <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
-          <li ng-repeat="author in bookData | orderBy: 'author'">
-            <a href="" ng-click="authorSelect($index)">{{author.author}}</a></li>
-       </ul>
-      </div><!-- /btn-group -->
-  </div><!-- /input-group -->
+
+        <div class="form-group marg">
+            <input id="year" class="form-control" ng-model="newBookData.published"  type="text" placeholder="Published, ex. (2000-01-01)">
+          </div>
+
+        <div class="form-group marg">
+            <input id="isbn" class="form-control" ng-model="newBookData.isbn" type="text" placeholder="ISBN">
+          </div>
+
+        <div class="form-group marg">
+         <textarea class="form-control" id="data" ng-model="newBookData.description"  rows="5" placeholder="Add book description here..."></textarea>
+         </div>
 
 
 
 
-<div class="input-group form-group">
-      <input type="text" placeholder="Genre" ng-model="newBookData.genre" class="form-control" aria-label="...">
-      <div class="input-group-btn" dropdown>
-        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
-        <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
-          <li ng-repeat="genre in bookData | orderBy: 'genre'">
-            <a href="" ng-click="genreSelect($index)">{{genre.genre}}</a></li>
-       </ul>
-      </div><!-- /btn-group -->
-  </div><!-- /input-group -->
-    
-
-  
-
-    <div class="form-group marg">
-        <input id="year" class="form-control" ng-model="newBookData.published"  type="text" placeholder="Published, ex. (2000-01-01)">
-      </div>
-
-    <div class="form-group marg">
-        <input id="isbn" class="form-control" ng-model="newBookData.isbn" type="text" placeholder="ISBN">
-      </div>
-
-    <div class="form-group marg">
-     <textarea class="form-control" id="data" ng-model="newBookData.description"  rows="5" placeholder="Add book description here..."></textarea>
-     </div>
-
-
-
-
-<button type="add" class="btn btn-default" ng-click="save()">{{saveBtnText}}</button>
-<button ng-if="canDelete" type="remove" class="btn btn-default" ng-click="delete()">Remove from database</button>
-</div> 
+    <button type="add" class="btn btn-default" ng-click="save()">{{saveBtnText}}</button>
+    <button ng-if="canDelete" type="remove" class="btn btn-default" ng-click="delete()">Remove from database</button>
+    </div> 
+    </div>
+  </div>
 </div>
 
 
 
 
-
-<!-- div class container fluid  col-lg-4-->
-
+  <!-- div class container fluid  col-lg-4-->
 
 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    
-        <!--<div class="form-group">
-          <input type="text" class="form-control" placeholder="Book Title">
-        </div>  
-       
 
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Author">
-        </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      
+          <!--<div class="form-group">
+            <input type="text" class="form-control" placeholder="Book Title">
+          </div>  
+         
+
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Author">
+          </div>
 
 
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="ISBN">
-        </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="ISBN">
+          </div>
 
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Genre">
-        </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Genre">
+          </div>
 
-          <input type="text" class="form-control" placeholder="Description">
-        </div>
-        <button type="add" class="btn btn-default">Add</button>
-      -->
+            <input type="text" class="form-control" placeholder="Description">
+          </div>
+          <button type="add" class="btn btn-default">Add</button>
+        -->

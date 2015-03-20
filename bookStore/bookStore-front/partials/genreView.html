@@ -9,10 +9,10 @@
 			      <p> genre description </p>
 			      <p> Books avaliable in this genre:</p> 				
 			      <p ng-repeat="book in bookData" ng-if="genre.genre == book.genre || book.genre.contains(genre.genre)"> 
-				      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
+				      <a href="#" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
 				      	{{book.title}} 
-				  	  </button> 
-			  	  </p> 
+				  	  </a> 
+			  	  </p>
 			    </accordion-group>
 	  		</accordion>
 	  	</div>

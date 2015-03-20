@@ -16,7 +16,11 @@
 				    	</thead>
 				    	<tbody>
 				    		<tr ng-repeat="book in bookData">
-				    			<td>{{book.title}}</td>
+				    			<td>
+				    				<a href="#" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
+				      					{{book.title}} 
+				  	  				</a>
+				    			</td>
 				    			<td>{{book.author}}</td>
 				    			<td>{{book.genre}}</td>
 				    			<td><button type="button" id="{{book.id}}" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">

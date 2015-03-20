@@ -1,11 +1,13 @@
-<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+ <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-<div class="whiteSurrounding"> <!-- Kims CSS-koppling -->
+<div class="authorDiv"> <!-- Kims CSS-koppling -->
   <h2>{{formTitle}}<h2>
 
 
 <div class="btn-group input-group form-group" dropdown is-open="status.isopen">
-      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+      <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
         Add/remove books
       </button>
       <ul class="dropdown-menu" role="menu">
@@ -44,6 +46,7 @@
 <button type="add" class="btn btn-default" ng-click="save()">{{saveBtnText}}</button>
 <button ng-if="canDelete" type="remove" class="btn btn-default" ng-click="delete()">Remove from database</button>
 </div> 
+</div>
 </div>
 
 
