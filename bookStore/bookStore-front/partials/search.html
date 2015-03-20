@@ -1,10 +1,11 @@
-    <div ng-if="searchFilterResult && query[sortBy]">
-			{{filterOptions}}
+<div ng-if="searchFilterResult && query[sortBy]">
 			<ul class="list-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
 				<li class="list-group-item" ng-repeat="data in bookData | filter:query as searchFilterResult">
 					<p>Author: {{data.author}}</p>
-					<p>Title: {{data.title}}</p>
+					<p>
+						Title: {{data.title}} 
+					</p>
 					<p>Genre: {{data.genre}}</p>
 				</li>
 			</ul>
-    </div>
+</div>
