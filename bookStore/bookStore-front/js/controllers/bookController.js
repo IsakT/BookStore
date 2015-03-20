@@ -32,5 +32,10 @@ app.controller("bookController", ["$http", "$scope", function($http, $scope){
 	}
 
 	// $scope.books = Book.index();
-	
+	/*
+	$scope.getBookRating = function(bookRating){
+		$scope.bookRating = bookRating;
+		console.log(bookRating);
+	}
+	*/
 }]);

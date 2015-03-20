@@ -8,3 +8,5 @@ app.controller("authorController", ["$scope", "$http", function($scope, $http){
 	});
 	
 }]);
+
+//Var anropas denna controllern? Eller är AuthornView länkat istället till bookController?

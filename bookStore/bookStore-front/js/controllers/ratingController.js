@@ -1,10 +1,16 @@
 angular.module('Rater', [])
-  .controller('rateCtrl', function($scope, $window) {
+  .controller('rateCtrl', function($scope, $window, $http) {
     $scope.rating = 5;
     $scope.saveRatingToServer = function(rating) {
       $window.alert('Rating selected - ' + rating);
     };
-  })
+
+    $http
+        .get("data.bookData.json")
+        .success(function(data){
+           console.log("Got dummydata", data)
+           $scope.bookData = data;
+  });
   .directive('dirRating', function () {
     return {
       restrict: 'A',
