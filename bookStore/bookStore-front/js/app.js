@@ -11,6 +11,16 @@ var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"])
 						  controller: "genreController"}).
 			when("/add", {templateUrl: "partials/addView.html",
 						  controller: "addController"}).
+			when("/addAuthor", {templateUrl:"partials/addAuthorView.html",
+						  controller: "addAuthorController"}).
+
+
+		/*Possible routing for deletion.
+		when("/delete", {templateUrl: "partials/addView.html",
+						  controller: "editController"}).
+		*/
+
+
 			when("/authorDetails", {templateUrl: "partials/authorDetailView.html",
 						  controller: "authorDetailController"}).
 			when("/bookDetails", {templateUrl: "partials/bookDetailView.html",
