@@ -1,35 +1,20 @@
 <div class="container"ng-controller="bookController" >
-
-	
-
 	<div class="genreDiv">
-
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0" ng-controller="genreController2">
-
-			<div modal="opened" ng-include src="'partials/modalView.html'"></div>
-			<div class="partialTitle">Genres:</div>
-				<accordion class="noob">
-				
-				
-
+		<div class="partialTitle row">Genres:</div>
+		<div modal="opened" ng-include src="'partials/modalView.html'"></div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="genreController2">			
+		<div class="row">
+			<accordion>
 			    <accordion-group heading={{genre.genre}} ng-repeat="genre in bookData" class="accordion">
-
 			      <p> genre description </p>
-			      <p> Books avaliable in this genre:</p> 
-				
+			      <p> Books avaliable in this genre:</p> 				
 			      <p ng-repeat="book in bookData" ng-if="genre.genre == book.genre || book.genre.contains(genre.genre)"> 
 				      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
 				      	{{book.title}} 
 				  	  </button> 
 			  	  </p> 
-
 			    </accordion-group>
-
-		  		</accordion>
-
-		</div>
+	  		</accordion>
+	  	</div>
 	</div>
-
-	</div>
-
 </div>

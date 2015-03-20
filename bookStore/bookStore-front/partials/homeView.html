@@ -1,46 +1,36 @@
-
 <div class="container">
 	<div class="homeDiv">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
-	<div class="partialTitle">Our top three:</div>
-
-	<div class="row"> 
-
-		<div class="col-xs-7 col-sm-12 col-md-10 col-lg-10 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
-
+		<div class="partialTitle row">Our top three:</div>
 			<div modal="opened" ng-include src="'partials/modalView.html'"></div>
 			<div ng-repeat="b in topThree">
+				<div class="row">
+					<div class="homeDiv__body ">
+						<div>
+							<a href="#/bookDetalView"><img class="homeBookCoverImage col-lg-2 col-md-2 col-sm-2 col-xs-2" src={{b.bookCover}} /></a>
+						</div>
+						<div>
+							<div class="homeBookDetails col-xs-10 col-sm-10 col-md-10 col-lg-10">
 
-			  <a href="#/bookDetalView">
-			    <img class="homeBookCoverImage" src={{b.bookCover}} />
-			  </a>
+								<h1>{{b.title}} <p class="homeRating">{{b.rating}}</p></h1>
 
-				<div class="homeDiv__body" >
+								<h3>By: <a class="homeLink" href="#/allBooksByThisAuthor">{{b.author}}</a></h3>
 
-					<div class="homeBookDetails">
+								<h4>{{b.publishingDate}}</h4>
 
-						<h1>{{b.title}} <p class="homeRating">{{b.rating}}</p></h1>
-					    <h3>By: <a class="homeLink" href="#/allBooksByThisAuthor" >{{b.author}}</a></h3>
+								<h4 class="homeGenreText"><a class="homeLink" href="#/genres">{{b.genre}}</a></h4>
 
-						<h4>{{b.publishingDate}}</h4>
-						<h4 class="homeGenreText"><a class="homeLink" href="#/genres">{{b.genre}}</a></h4>
+								<div class="homeBookDescription">
 
-					    	<div class="homeBookDescription">
-						    	<p>
-									{{b.description}}
-									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">Read more </button> 
-									
-								</p>
+									<p>
+										{{b.description}}<button type="button" class="btn btn-default buttonBRC" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">Read more</button> 
+										<div class="clearThis"></div>
+									</p>
+								</div>
 							</div>
-
-				  	</div></div></div>
-
+						</div>
+					</div>
 				</div>
-</div>
 			</div>
-
 		</div>
-		
 	</div>
-
 </div>
