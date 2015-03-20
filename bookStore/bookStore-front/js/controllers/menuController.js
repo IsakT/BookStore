@@ -1,6 +1,5 @@
 app.controller("menuController", ["$scope", "$rootScope", "$location", function($scope, $rootScope, $location){
 	
-
 	var loggedIn;
 
 	$scope.goTo = function(path) {
@@ -10,7 +9,6 @@ app.controller("menuController", ["$scope", "$rootScope", "$location", function(
 	$rootScope.sortBy = "all";
 	$rootScope.query = {};
   $rootScope.filterOptions = ["all", "genre", "author", "title"];
-	
 	
 	$scope.logIn = function(userName,password){
 		if(userName == null && password == null){

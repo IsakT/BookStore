@@ -15,7 +15,7 @@ app.controller("searchController", ["$scope", "$http", "$rootScope", function($s
 			
     });
 
-		$rootScope.$watch("query",function(x){console.log("query",x)});
+		//$rootScope.$watch("query",function(x){console.log("query",x)});
     $rootScope.$watch("searchFilterResult", function(newVal, oldVal) {
       console.log("searchFilterResult changed from ", oldVal, " to ", newVal);
     });
