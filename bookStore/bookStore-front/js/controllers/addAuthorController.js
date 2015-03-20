@@ -1,8 +1,8 @@
-app.controller("addController", ["$scope", "$http", "$location", function($scope, $http, $location){
+app.controller("addAuthorController", ["$scope", "$http", "$location", function($scope, $http, $location){
 	console.log("Controller is working");
 	$scope.newBookData = {};
 
-	$scope.formTitle = "Please enter book credentials";
+	$scope.formTitle = "Please enter author credentials";
 	$scope.saveBtnText = "Add to database";
 
 	$scope.canDelete = true;
