@@ -1,26 +1,29 @@
-app.controller("searchController", ["$scope", "$http", function($scope, $http){
-  $scope.searchFilterResult = [];
+app.controller("searchController", ["$scope", "$http", "$rootScope", function($scope, $http, $rootScope){
+  $rootScope.searchFilterResult = [];
     console.log("searchController alive.");
     $http
     .get("data/bookData.json")
     .success(function(data){
       console.log("Got dummydata", data)
-      $scope.bookData = data;
+      $rootScope.bookData = data;
+			
+			// add a new property that mashes all properties
+			// into one string in order to make filter = all work
+			data.forEach(function(book){
+				book.all = book.author + " " + book.genre + " " + book.title;
+			});
+			
     });
 
-    $scope.query = {}
-    $scope.filterOptions = ["genre", "author", "title"];
-
-    $scope.sortBy = $scope.filterOptions[0];
-
-    $scope.$watch("searchFilterResult", function(newVal, oldVal) {
+		$rootScope.$watch("query",function(x){console.log("query",x)});
+    $rootScope.$watch("searchFilterResult", function(newVal, oldVal) {
       console.log("searchFilterResult changed from ", oldVal, " to ", newVal);
     });
 
-    $scope.$watch("sortBy", function(newVal, oldVal) {
-      var textVal = $scope.query[oldVal];
-      $scope.query = {};
-      $scope.query[newVal] = textVal;
+    $rootScope.$watch("sortBy", function(newVal, oldVal) {
+      var textVal = $rootScope.query[oldVal];
+      $rootScope.query = {};
+      $rootScope.query[newVal] = textVal;
       console.log("sortBy changed from ", oldVal, " to ", newVal);
     });
 }]);
