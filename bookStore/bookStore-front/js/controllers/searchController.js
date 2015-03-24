@@ -3,12 +3,12 @@ app.controller("searchController", ["$scope", "$http", "$rootScope", "$routePara
 	
 	$scope.filterOptions = ["all", "genre", "author", "title"];
   $scope.sortBy = $scope.filterOptions[0];
-
+	
   if ($routeParams) {
     console.log("searchController got $routeParams: ", $routeParams, " now using these as $scope.query...");
     $rootScope.query = $routeParams;
   }
-
+	
   $scope.searchFilterResult = [];
     console.log("searchController alive.");
     $http
