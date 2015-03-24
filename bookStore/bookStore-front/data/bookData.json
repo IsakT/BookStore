@@ -1,4 +1,4 @@
-[
+﻿[
     {
         "title": "Sapiens : en kort historik över mänskligheten",
         "description": "För cirka 70 000 år sedan var jorden befolkad av minst sex olika mänskliga arter. Ingen av dem hade någon större inverkan på den globala ekologin. Idag har bara en art överlevt - Homo sapiens. Hur blev det så? En del av hemligheten bakom framgångarna är att vi är det enda djur som kan prata om saker som existerar enbart i vår egen fantasi, såsom gudar, nationer, pengar och mänskliga rättigheter. Om detta och mycket mer handlar denna internationella bästsäljare som ger nytt bränsle åt diskussionen om vårt gemensamma förflutna och planetens framtid",
@@ -163,6 +163,17 @@
         "details": "asff",
         "cover": "css/img/stalker.jpg",
         "id": 12
+    },
+    {
+        "title": "Benjamin Syrsa's Favoriter",
+        "description": "En samling snuskiga shortstories",
+        "author": "Benji",
+        "genre": "Fantasy",
+        "year": "2014-10-20",
+        "isbn": " 9789100136741231",
+        "details": "asff",
+        "cover": "css/img/stalker.jpg",
+        "id": 13
     }
     
 ]
