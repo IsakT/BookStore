@@ -1,4 +1,7 @@
-/*-----------------FONTS-----------------------*/
+/*------------- -------------*/
+
+
+/*------------- BOOK VIEW -------------*/
 
 .bookTable > tbody > tr > td, .bookTable > thead > tr > th, p, h1, h2, h3, h4, h5, a, .modal-title{
   font-family: 'Lekton', sans-serif;
@@ -12,6 +15,10 @@
   font-size: 16px;
   vertical-align: text-bottom;
 }
+
+/*------------- BOOK VIEW -------------*/
+
+/*------------- HEAD --------*/
 
 .menuFont, .title, .partialTitle {
   font-family: 'Stint Ultra Condensed', cursive;
@@ -32,23 +39,73 @@
   color: gray;
 }
 
-.homeLink{
-  color: black;
-}
-.homeLink:hover {
-  color: white;
-}
 
 .navbar-form.navbar-right:last-child {
  margin-right: 18px;
 }
 
-/*Used for centering the navbar*/
-.center {
-	margin-left: auto;
-	margin-right: auto;
+
+/*Centering the navbar*/
+.center.navbar .nav {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
 }
-/*Set background for the body*/
+
+/*Changing style of navbar li*/
+.navbar-inverse .navbar-nav > li {
+   color:white;
+   font-size:30px;
+   width:100px;
+}
+
+/*Underline all links on hover*/
+.navbar-inverse .navbar-nav > li > a:hover {
+   color:gray;
+   text-decoration:underline;
+}
+
+/*Make navbar transparent*/
+.navbar{
+    background-color: transparent;
+    background: transparent;
+}
+
+/*Centering the menu title*/
+.menu{
+  text-align:center;
+  position: relative;
+  background-image: url("img/grayBackground.jpg");
+    color : gray;
+}
+
+.menubtnWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menubtnWrapper:after {
+  content:"";
+  display: block;
+  clear: both;
+}
+
+/*Position social media buttons*/
+.a2a_kit {
+  float: left;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  display: inline-block;
+}
+
+/*------------- HEAD -------------*/
+
+/*------------- BODY -------------*/
+
 body { 
   background: gray;
   -webkit-background-size: cover;
@@ -56,97 +113,10 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/*Centering the navbar*/
-.center.navbar .nav {
-	float:none;
-	display:inline-block;
-	*display:inline; /* ie7 fix */
-	*zoom:1; /* hasLayout ie7 trigger */
-	vertical-align: top;
-}
-/*Changing style of navbar li*/
-.navbar-inverse .navbar-nav > li {
-	 color:white;
 
-	 font-size:30px;
-	 width:100px;
-}
+/*------------- BODY -------------*/
 
-/*Underline all links on hover*/
-.navbar-inverse .navbar-nav > li > a:hover {
-	 color:gray;
-	 text-decoration:underline;
-}
-/*Make navbar transparent*/
-.navbar{
-    background-color: transparent;
-    background: transparent;
-}
-/*Centering the menu title*/
-.menu{
-	text-align:center;
-	position: relative;
-}
-.menubtnWrapper {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
-
-.menubtnWrapper:after {
-	content:"";
-	display: block;
-	clear: both;
-}
-/*Style and position menu title*/
-.menuTitle{
-	font-family: 'Arizonia', cursive;
-	font-size: 80px;
-  text-align: center;
-	position:relative;
-	margin:0 auto;
-	top:0px;
-}
-/*Set color of menu title*/
-.menuTitle > p{
-  color : gray;
-}
-/*Styling admin button*/
-
-/*Position admin button*/
-.login-button{
-	float: left;
-	margin-top: 2px;
-	display: inline-block;
-	position:absolute;
-	top:-158px;
-	left:0;
-}
-.logout-button{
-	position:absolute;
-	top:-158px;
-	left:0;
-}
-/*Position search box*/
-.search{
-	float: right;
-	margin-bottom: 2px;
-	margin-left: 2px;
-	display: inline-block;
-}
-/*Set background image for menu*/
-.menu{
-	background-image: url("img/grayBackground.jpg");
-}
-/*Position social media buttons*/
-.a2a_kit {
-	float: left;
-	margin-bottom: 2px;
-	margin-left: 2px;
-	display: inline-block;
-}
-
+/*------------- FOOTER -------------*/
 .footy {
   color: gray;
   background-image: url("img/grayBackground.jpg");
@@ -155,8 +125,9 @@ body {
   height: 130%;
   width: 100%;
 }
+/*------------- FOOTER -------------*/
 
-/*-------------BookView Styling-------------*/
+/*---------------- BOOK DETAIL POP UP -------------------*/
 
 /*Set size of panel inside modal in bookDetails*/
 .panel{
@@ -177,39 +148,27 @@ body {
 .saveButton{
 	position:right100%;
 }
+/*---------------- BOOK DETAIL POP UP -------------------*/
+
+/*---------------- LOG IN / LOG OUT -------------------*/
+.modal-body, .modal-dialog, .panel-body{
+  max-width: 500px;
+  
+}
 /*Position username textbox in loginView*/
 .username{
 	margin-bottom: 30px;
-	width:300px;
-	margin-left: 134px
+	width:150px;
+	margin-left: 10px
 }
 /*Position password textbox in loginView*/
 .password{
-	width:300px;
-	margin-left: 134px
+	width:150px;
+	margin-left: 10px
 }
-
-/*-----------BUTTONS----------------*/
-
-
-
+/*---------------- LOG IN / LOG OUT -------------------*/
 
 /*---------------- HOME VIEW -------------------*/
-
-.homeDiv {
-  margin:10px;
-  background: transparent;
-  background-color: transparent;
-  margin-right: 10px;
-  display:block;
-  float:right;
-  margin-left: 10px;  
-  background: #E5E5E5;
-  border :1px solid #BEBFBF;
-  padding: 10px;
-  border-radius: 10px;
-  color: black;
-}
 
 .homeDiv, .homeDiv__body {
   overflow:hidden;
@@ -218,9 +177,8 @@ body {
   margin-bottom: 10px;
   margin-right: 15px;
   margin-left: 15px;
+  color: black;
 }
-
-
 
 .homeBookDetails{ /*Title, author, publishing year */
 	padding: 5px;
@@ -271,7 +229,7 @@ body {
   margin-bottom: 5px;
 }
 
-/*---------------- Author, genre, home and book divs -------------------*/
+/*------------- AUTHOR, GENRE, HOME and BOOK divs -------------*/
 
 .authorDiv, .genreDiv, .homeDiv, .bookDiv, .authorDiv{
   margin-top: 20px;
@@ -298,8 +256,11 @@ body {
 .accordion .panel-heading {
   background: #B8B8B8;
 }
+/*------------- AUTHOR, GENRE, HOME and BOOK divs -------------*/
 
-/* -------------- ADD VIEW -------------------*/
+
+/*------------- ADD VIEW -------------*/
+
 .scrollable-menu {
     height: auto;
     overflow-x: hidden;
@@ -329,7 +290,10 @@ body {
   top:0px;
   margin-bottom: 20px;
 }
-/* -------------- Rating  -------------------*/
+
+/*------------- ADD VIEW -------------*/
+
+/*------------- RATING -------------*/
 .rating{
   color: #A0A0A0;
   margin: 0;
@@ -353,4 +317,5 @@ ul.rating {
   color: green;
 }
 
-/*------------SEARCH-----------------*/
+/*------------- RATING -------------*/
+
