@@ -5,7 +5,7 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >	
 			<div class="row">		
 				<accordion >				
-				  <accordion-group heading={{book.author}} ng-repeat="book in bookData" class="accordion">
+				  <accordion-group heading={{book.author}} ng-repeat="book in bookData | filter: query" class="accordion">
 				    <tbody>
 				    	<p>Books by this author:</p>
 				    	<td>

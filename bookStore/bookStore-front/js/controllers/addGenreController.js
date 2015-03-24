@@ -1,8 +1,8 @@
-app.controller("addController", ["$scope", "$http", "$location", function($scope, $http, $location){
+app.controller("addGenreController", ["$scope", "$http", "$location", function($scope, $http, $location){
 	console.log("Controller is working");
-	$scope.newBookData = {};
+	$scope.newGenreData = {};
 
-	$scope.formTitle = "Please enter book credentials";
+	$scope.formTitle = "Please enter genre credentials";
 	$scope.saveBtnText = "Add to database";
 
 	$scope.canDelete = true;
@@ -26,7 +26,7 @@ app.controller("addController", ["$scope", "$http", "$location", function($scope
 		.get("data/bookData.json")
 		.success(function(data ){
 			console.log("Got dummydata", data)
-			$scope.bookData = data();
+			$scope.bookData = data;
 		});
 
 	$scope.authorSelect = function(authIndex) {
@@ -51,7 +51,7 @@ app.controller("addController", ["$scope", "$http", "$location", function($scope
 	})
 
 	$scope.titleSelect = function(titleIndex) {
-		console.log("User selected title: ", $scope.bookData[titleIndex].title);
+		console.log("User selected genre: ", $scope.bookData[titleIndex].title);
 		$scope.newBookData.title = $scope.bookData[titleIndex].title;
 		console.log("selectedTitle: ", $scope.newBookData.title);
 	}

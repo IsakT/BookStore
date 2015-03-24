@@ -7,12 +7,12 @@
 
 
 <div class="btn-group input-group form-group" dropdown is-open="status.isopen">
-      <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
         Add/remove books
       </button>
       <ul class="dropdown-menu" role="menu">
+       <li><a href="" ng-click="goTos('/addAuthor')">Add/remove authors</a></li>
        <li><a href="" ng-click="goTos('/add')">Add/remove books</a></li>
-       <li><a href="" ng-click="goTos('/addGenre')">Add/remove genres</a></li>
       </ul>
     </div>
 
@@ -20,24 +20,21 @@
 
 
 
-
-      
-  <div class="input-group form-group">
-      <input type="text"  placeholder="Author" ng-model="newBookData.author" class="form-control" aria-label="...">
+<div class="input-group form-group">
+      <input type="text" placeholder="Genre" ng-model="newBookData.genre" class="form-control" aria-label="...">
       <div class="input-group-btn" dropdown>
         <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
-       <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
-          <li ng-repeat="author in bookData">
-            <a href="" ng-click="authorSelect($index)">{{author.author}}</a></li>
+        <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+          <li ng-repeat="genre in bookData | orderBy: 'genre'">
+            <a href="" ng-click="genreSelect($index)">{{genre.genre}}</a></li>
        </ul>
       </div><!-- /btn-group -->
   </div><!-- /input-group -->
-
-
+    
 
 
     <div class="form-group marg">
-     <textarea class="form-control" id="data" ng-model="newBookData.description"  rows="5" placeholder="Add author description here..."></textarea>
+     <textarea class="form-control" id="data" ng-model="newBookData.description"  rows="5" placeholder="Add book description here..."></textarea>
      </div>
 
 
@@ -46,7 +43,6 @@
 <button type="add" class="btn btn-default" ng-click="save()">{{saveBtnText}}</button>
 <button ng-if="canDelete" type="remove" class="btn btn-default" ng-click="delete()">Remove from database</button>
 </div> 
-</div>
 </div>
 
 

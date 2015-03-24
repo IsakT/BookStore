@@ -1,16 +1,37 @@
-<div class="container">
- 	<div class="row">
- 		<div class="search">
-		    <div ng-if="searchFilterResult && query[sortBy]">
-				{{filterOptions}}
-				<ul class="search list-group col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<li class="list-group-item" ng-repeat="data in bookData | filter:query as searchFilterResult">
-						<p>Author: {{data.author}}</p>
-						<p>Title: {{data.title}}</p>
-						<p>Genre: {{data.genre}}</p>
-					</li>
-				</ul>
+<div class="container bookView" ng-controller="bookController">
+	<div class="bookDiv">
+	<section class="row">
+  		<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12">
+  			<div class="partialTitle">Search results..</div>
+  			<div class="center-panel panel panel-default bookViewPanel">
+				<div modal="opened" ng-include src="'partials/modalView.html'"></div>
+				  <table class="table bookTable">
+				    	<thead>
+				    		<tr>
+				    			<th>Title</th>
+				    			<th>Author</th>
+				    			<th>Genre</th>
+				    			<th>Details</th>			    			
+				    		</tr>
+				    	</thead>
+				    	<tbody>
+				    		<tr ng-repeat="book in bookData | filter: query">
+				    			<td>
+				    				<a href="#" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
+				      					{{book.title}} 
+				  	  				</a>
+				    			</td>
+				    			<td>{{book.author}}</td>
+				    			<td>{{book.genre}}</td>
+				    			<td><button type="button" id="{{book.id}}" class="btn btn-default" data-toggle="modal" data-target="#myModal" ng-click="getBookId(book.id)">
+				  						Book Details
+									</button>
+								</td>
+				    		</tr>
+				    	</tbody>
+				  </table>
 			</div>
-		</div>
-    </div>
+		 </div>
+	</section>
+	</div>	
 </div>

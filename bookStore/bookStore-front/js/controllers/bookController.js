@@ -3,7 +3,10 @@ app.controller("bookController", ["$http", "$scope", function($http, $scope){
 	$http
 		.get("data/bookData.json")
 		.success(function(data){
-			console.log("Got dummydata", data)
+			console.log("Got dummydata", data);
+			data.forEach(function(book){
+				book.all = book.author + " " + book.genre + " " + book.title;
+			});
 			$scope.bookData = data;
 	});
 

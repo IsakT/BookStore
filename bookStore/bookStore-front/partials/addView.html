@@ -1,3 +1,4 @@
+
  <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -6,15 +7,21 @@
       <h2>{{formTitle}}<h2>
 
 
-    <div class="btn-group input-group form-group" dropdown is-open="status.isopen">
-          <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
-            Add/remove books
-          </button>
-          <ul class="dropdown-menu" role="menu">
-           <li><a href="" ng-click="goTos('/addAuthor')">Add/remove authors</a></li>
-            <li><a href="#">Add/remove genres</a></li>
-          </ul>
-        </div>
+<div class="col-xs-10 col-sm-10 col-md-12 col-lg-12 col-xs-offset-1 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
+
+
+
+<div class="btn-group input-group form-group" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+        Add/remove books
+      </button>
+      <ul class="dropdown-menu" role="menu">
+       <li><a href="" ng-click="goTos('/addAuthor')">Add/remove authors</a></li>
+       <li><a href="" ng-click="goTos('/addGenre')">Add/remove genres</a></li>
+      </ul>
+    </div>
+
+
 
 
 
@@ -43,6 +50,32 @@
            </ul>
           </div><!-- /btn-group -->
       </div><!-- /input-group -->
+
+    <!--- ng-modeö="callTitle" for controller -->
+  <div class="input-group form-group">
+      <input type="text"  placeholder="Title" ng-model="newBookData.title" class="form-control" aria-label="...">
+      <div class="input-group-btn" dropdown>
+        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+       <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+          <li ng-repeat="title in bookData">
+            <a href="" ng-click="titleSelect($index)">{{title.title}}</a></li>
+       </ul>
+      </div><!-- /btn-group -->
+  </div><!-- /input-group -->
+
+
+      
+  <div class="input-group form-group">
+      <input type="text"  placeholder="Author" ng-model="newBookData.author" class="form-control" aria-label="...">
+      <div class="input-group-btn" dropdown>
+        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle aria-expanded="false">Existing</button>
+       <ul class="dropdown-menu dropdown-menu-right scrollable-menu" role="menu">
+          <li ng-repeat="author in bookData">
+            <a href="" ng-click="authorSelect($index)">{{author.author}}</a></li>
+       </ul>
+      </div><!-- /btn-group -->
+  </div><!-- /input-group -->
+
 
 
 
