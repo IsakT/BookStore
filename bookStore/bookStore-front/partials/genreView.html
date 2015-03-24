@@ -5,7 +5,7 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-controller="genreController2">			
 		<div class="row">
 			<accordion>
-			    <accordion-group heading={{genre.genre}} ng-repeat="genre in bookData" class="accordion">
+			    <accordion-group heading={{genre.genre}} ng-repeat="genre in bookData | filter: query" class="accordion">
 			      <p> genre description </p>
 			      <p> Books avaliable in this genre:</p> 				
 			      <p ng-repeat="book in bookData" ng-if="genre.genre == book.genre || book.genre.contains(genre.genre)"> 

@@ -1,11 +1,12 @@
 app.controller("searchController", ["$scope", "$http", "$rootScope", "$routeParams", "$location", function($scope, $http, $rootScope, $routeParams, $location){
-  $scope.filterOptions = ["all", "genre", "author", "title"];
+  
+	
+	$scope.filterOptions = ["all", "genre", "author", "title"];
   $scope.sortBy = $scope.filterOptions[0];
-  $scope.query = {};
 
   if ($routeParams) {
     console.log("searchController got $routeParams: ", $routeParams, " now using these as $scope.query...");
-    $scope.query = $routeParams;
+    $rootScope.query = $routeParams;
   }
 
   $scope.searchFilterResult = [];
@@ -31,15 +32,14 @@ app.controller("searchController", ["$scope", "$http", "$rootScope", "$routePara
 
     $scope.$watch("sortBy", function(newVal, oldVal) {
       if (!oldVal) { return; }
-      var textVal = $scope.query[oldVal];
-      $scope.query = {};
-      $scope.query[newVal] = textVal;
+      var textVal = $rootScope.query[oldVal];
+      $rootScope.query[newVal] = textVal;
       console.log("sortBy changed from ", oldVal, " to ", newVal);
     });
 
     $scope.goSearch = function() {
-      console.log("User wants to search with query: ", $scope.query);
-      console.log("now changing $location to: " + "/search?" + $scope.sortBy +"=" + $scope.query[$scope.sortBy]);
-      $location.url("/search?" + $scope.sortBy +"=" + $scope.query[$scope.sortBy]);
+      console.log("User wants to search with query: ", $rootScope.query);
+      console.log("now changing $location to: " + "/search?" + $scope.sortBy +"=" + $rootScope.query[$scope.sortBy]);
+      $location.url("/search?" + $scope.sortBy +"=" + $rootScope.query[$scope.sortBy]);
     }
 }]);
