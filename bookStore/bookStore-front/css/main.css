@@ -147,6 +147,15 @@ body {
 	display: inline-block;
 }
 
+.footy {
+  color: gray;
+  background-image: url("img/grayBackground.jpg");
+  padding: 10px;
+  text-align: center;
+  height: 130%;
+  width: 100%;
+}
+
 /*-------------BookView Styling-------------*/
 
 /*Set size of panel inside modal in bookDetails*/
@@ -274,6 +283,7 @@ body {
   border :1px solid #313131;
   padding: 10px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .accordion {
