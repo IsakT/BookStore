@@ -39,11 +39,15 @@
   color: white;
 }
 
+.navbar-form.navbar-right:last-child {
+ margin-right: 18px;
+}
+
 /*Used for centering the navbar*/
-/*.center {
+.center {
 	margin-left: auto;
 	margin-right: auto;
-}*/
+}
 /*Set background for the body*/
 body { 
   background: gray;
@@ -99,6 +103,7 @@ body {
 .menuTitle{
 	font-family: 'Arizonia', cursive;
 	font-size: 80px;
+  text-align: center;
 	position:relative;
 	margin:0 auto;
 	top:0px;
@@ -339,19 +344,3 @@ ul.rating {
 }
 
 /*------------SEARCH-----------------*/
-.search{
-  float: right;
-  position: absolute;
-  display: inline-block;
-  top: -100px;
-  right: 0;
-}
-
-.login-button{
-  float: right;
-  margin-top: 2px;
-  display: inline-block;
-  position:absolute;
-  top:-145px;
-  right:45;
-}

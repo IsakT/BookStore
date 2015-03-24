@@ -1,11 +1,20 @@
-app.controller("searchController", ["$scope", "$http", "$rootScope", function($scope, $http, $rootScope){
-  $rootScope.searchFilterResult = [];
+app.controller("searchController", ["$scope", "$http", "$rootScope", "$routeParams", "$location", function($scope, $http, $rootScope, $routeParams, $location){
+  $scope.filterOptions = ["all", "genre", "author", "title"];
+  $scope.sortBy = $scope.filterOptions[0];
+  $scope.query = {};
+
+  if ($routeParams) {
+    console.log("searchController got $routeParams: ", $routeParams, " now using these as $scope.query...");
+    $scope.query = $routeParams;
+  }
+
+  $scope.searchFilterResult = [];
     console.log("searchController alive.");
     $http
     .get("data/bookData.json")
     .success(function(data){
       console.log("Got dummydata", data)
-      $rootScope.bookData = data;
+      $scope.bookData = data;
 			
 			// add a new property that mashes all properties
 			// into one string in order to make filter = all work
@@ -16,14 +25,21 @@ app.controller("searchController", ["$scope", "$http", "$rootScope", function($s
     });
 
 		//$rootScope.$watch("query",function(x){console.log("query",x)});
-    $rootScope.$watch("searchFilterResult", function(newVal, oldVal) {
+    $scope.$watch("searchFilterResult", function(newVal, oldVal) {
       console.log("searchFilterResult changed from ", oldVal, " to ", newVal);
     });
 
-    $rootScope.$watch("sortBy", function(newVal, oldVal) {
-      var textVal = $rootScope.query[oldVal];
-      $rootScope.query = {};
-      $rootScope.query[newVal] = textVal;
+    $scope.$watch("sortBy", function(newVal, oldVal) {
+      if (!oldVal) { return; }
+      var textVal = $scope.query[oldVal];
+      $scope.query = {};
+      $scope.query[newVal] = textVal;
       console.log("sortBy changed from ", oldVal, " to ", newVal);
     });
+
+    $scope.goSearch = function() {
+      console.log("User wants to search with query: ", $scope.query);
+      console.log("now changing $location to: " + "/search?" + $scope.sortBy +"=" + $scope.query[$scope.sortBy]);
+      $location.url("/search?" + $scope.sortBy +"=" + $scope.query[$scope.sortBy]);
+    }
 }]);
