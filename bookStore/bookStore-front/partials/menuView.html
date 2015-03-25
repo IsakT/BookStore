@@ -13,13 +13,13 @@
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav" id="nav">
 
-          <li><a class="menuFont" href="" ng-click="goTo('/home')">Home</a></li>
-          <li><a class="menuFont" href="" ng-click="goTo('/authors')">Authors</a></li>
-          <li><a class="menuFont" href="" ng-click="goTo('/books')">Books</a></li>
-          <li><a class="menuFont" href="" ng-click="goTo('/genres')">Genres</a></li>
-          <li><a class="menuFont" href="" ng-click="goTo('/add')" ng-show="showAdd">+Add+</a></li>         
+          <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/home')">Home</a></li>
+          <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/authors')">Authors</a></li>
+          <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/books')">Books</a></li>
+          <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/genres')">Genres</a></li>
+          <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/add')" ng-show="showAdd">+Add+</a></li>     
           <li><a href="#" class="menuFont" ng-hide="hideLogIn" data-toggle="modal" data-target="#loginModal">Log in</a></li>
           <li><a href="#" class="menuFont" ng-show="showLogOut" ng-click="logOut()">Log out</a></li>
             <form class="navbar-form navbar-right" role="search">
@@ -34,8 +34,24 @@
             </form>
         </ul>
       </div><!-- /.navbar-collapse -->
+
     </nav><!-- /.container-fluid -->
   </nav>
+
+<script type="text/javascript">
+var current = document.getElementById('default');
+
+  function highlite(el)
+  {
+     if (current != null)
+     {
+         current.className = "menuFont";
+     }
+     el.className = "highlite";
+     current = el;
+  }
+</script> 
+
   <div class="container">
     <div class="row">
       <div class="menuTitle col-xs-12 col-sm-12 col-md-12 col-lg-12"><p class="title">hoeBag [buuk stohr]</p>
@@ -44,10 +60,10 @@
 
     <div class="row">
       <div class="menubtnWrapper">
-  			<div class="search col-xs-12 col-sm-4 col-md-2 col-lg-2">
+        <div class="search col-xs-12 col-sm-4 col-md-2 col-lg-2">
 
-  			</div>
-  		</div>	
+        </div>
+      </div>  
     </div>
 
         <div class="a2a_kit a2a_kit_size_32 a2a_default_style">

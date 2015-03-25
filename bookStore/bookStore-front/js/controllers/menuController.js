@@ -6,6 +6,8 @@ app.controller("menuController", ["$scope", "$rootScope", "$location", function(
 		$location.url(path);
 	}
 
+	
+
 	/*$rootScope.sortBy = "all";
 	$rootScope.query = {};
   	$rootScope.filterOptions = ["all", "genre", "author", "title"];*/
