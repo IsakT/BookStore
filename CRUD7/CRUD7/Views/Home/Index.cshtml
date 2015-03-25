@@ -1,0 +1,76 @@
+﻿<html ng-app="bookStore">
+<head>
+    <title>Book Store</title>
+    <base href="/" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Styling-->
+    <link rel="stylesheet" href="/bookStore-Front/css/meyer-reset.css">
+    <link rel="stylesheet" type="text/css" href="/bookStore-Front/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/bookStore-Front/css/main.css">
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Stint+Ultra+Condensed' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ceviche+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Forum' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lekton:400,400italic,700|MedievalSharp' rel='stylesheet' type='text/css'>
+    <!--Scripts-->
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+    <!--Angular-->
+    <script src="/bookStore-Front/js/angular/angular.js"></script>
+    <script src="/bookStore-Front/js/angular/angular-route.js"></script>
+    <script src="/bookStore-Front/js/angular/angular-resource.js"></script>
+    <!--Javascript-->
+    <script type="text/javascript" src="/bookStore-Front/js/bootstrap.js"></script>
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="/bookStore-Front/js/app.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/ui-bootstrap.js"></script>
+    <!--Controllers-->
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/menuController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/homeController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/authorController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/bookController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/genreController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/authorDetailController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/bookDetailController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/addController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/searchController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/addAuthorController.js"></script>
+    <script type="text/javascript" src="/bookStore-Front/js/controllers/addGenreController.js"></script>
+
+    <!--Services-->
+    <script type="text/javascript" src="/bookStore-Front/js/services/adminService.js"></script>
+</head>
+<body>
+    <header ng-include="'/bookStore-Front/partials/menuView.html'" ng-controller="menuController"></header>
+    <ng-view></ng-view>
+</body>
+
+<footer>
+    <div class="container footy">
+        <nav class="footy">
+            <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <li>Contact:</li>
+                <li>info@hoebagBS.com</li>
+                <li>Phone: 555-555555</li>
+                <li>Fax: 555-555777</li>
+            </ul>
+
+            <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <li>Post adress:</li>
+                <li>Box 3109</li>
+                <li>Mulberry Road 4322</li>
+                <li>34462 Univille</li>
+            </ul>
+
+            <ul class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <li>Visiting adress:</li>
+                <li>Mulberry Road 4322</li>
+                <li>34462 Univille</li>
+                <li>Bring your own TP!</li>
+            </ul>
+        </nav>
+</footer>
+
+</html>
