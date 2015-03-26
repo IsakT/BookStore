@@ -2,25 +2,25 @@ var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"])
 	config(["$routeProvider", function ($routeProvider){
 		$routeProvider.
 			when("/home", {
-			    templateUrl: "/bookStore-Front/partials/homeView.html",
-						  controller: "homeController"}).
+			    templateUrl: "/bookStore-front/partials/homeView.html",
+						  controller: "bookController"}).
 			when("/authors", {
-			    templateUrl: "/bookStore-Front/partials/authorView.html",
+			    templateUrl: "/bookStore-front/partials/authorView.html",
 						  controller: "authorController"}).
 			when("/books", {
-			    templateUrl: "/bookStore-Front/partials/bookView.html",
+			    templateUrl: "/bookStore-front/partials/bookView.html",
 						  controller: "bookController"}).
 			when("/genres", {
-			    templateUrl: "/bookStore-Front/partials/genreView.html",
+			    templateUrl: "/bookStore-front/partials/genreView.html",
 						  controller: "genreController"}).
 			when("/add", {
-			    templateUrl: "/bookStore-Front/partials/addView.html",
+			    templateUrl: "/bookStore-front/partials/addView.html",
 						  controller: "addController"}).
 			when("/addAuthor", {
-			    templateUrl: "/bookStore-Front/partials/addAuthorView.html",
+			    templateUrl: "/bookStore-front/partials/addAuthorView.html",
 						  controller: "addAuthorController"}).
 			when("/addGenre", {
-			    templateUrl: "/bookStore-Front/partials/addGenreView.html",
+			    templateUrl: "/bookStore-front/partials/addGenreView.html",
 						  controller: "addGenreController"}).
 
 
@@ -31,18 +31,17 @@ var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"])
 
 
 			when("/authorDetails", {
-			    templateUrl: "/bookStore-Front/partials/authorDetailView.html",
+			    templateUrl: "/bookStore-front/partials/authorDetailView.html",
 						  controller: "authorDetailController"}).
 			when("/bookDetails", {
-			    templateUrl: "/bookStore-Front/partials/bookDetailView.html",
+			    templateUrl: "/bookStore-front/partials/bookDetailView.html",
 						  controller: "bookDetailController"}).
 			when("/search", {
-			    templateUrl: "/bookStore-Front/partials/search.html",
+			    templateUrl: "/bookStore-front/partials/search.html",
 						  controller: "searchController"}).
 			otherwise({
 				redirectTo: "/home"
 			});
 
-			$locationProvider.html5Mode(true);
 
 	}]);

@@ -15,7 +15,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" id="nav">
 
-          <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/home')">Home</a></li>
+          <li><a id="default" class="menuFont highlite" onclick="highlite(this);" href="" ng-click="goTo('/home')">Home</a></li>
           <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/authors')">Authors</a></li>
           <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/books')">Books</a></li>
           <li><a class="menuFont" onclick="highlite(this);" href="" ng-click="goTo('/genres')">Genres</a></li>
@@ -38,7 +38,7 @@
 
 <script type="text/javascript">
 var current = document.getElementById('default');
-current = 'home';
+
   function highlite(el)
 {
      if (current != null)

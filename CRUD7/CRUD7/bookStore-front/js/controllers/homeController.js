@@ -2,7 +2,7 @@ app.controller("homeController", ["$scope", function($scope){
 
 	$scope.topThree = [
 	{
-	  title: 'Night Watch',
+	  title: 'THIS SHOULDNT BE HERE ANYMORE WTFFFFFF',
 	  author: 'Sir Terry Pratchett',
 	  bookCover: 'http://www.fantasybookreview.co.uk/images/night-watch.jpg',
 	  genre: 'Fantasy',
