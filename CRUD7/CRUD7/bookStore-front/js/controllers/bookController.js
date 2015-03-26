@@ -1,14 +1,15 @@
-app.controller("bookController", ["$http", "$scope", function($http, $scope){
+app.controller("bookController", ["$scope", "book","author","genre", function ($scope, book, author, genre) {
+    console.log("bookController is working");
 	
-	$http
-		.get("data/bookData.json")
-		.success(function(data){
-			console.log("Got dummydata", data);
-			data.forEach(function(book){
-				book.all = book.author + " " + book.genre + " " + book.title;
-			});
-			$scope.bookData = data;
-	});
+    $scope.bookData = book.index(function (data) {
+        console.log($scope.bookData,"BOOKS");
+    });
+    $scope.authorData = author.index(function (data) {
+        console.log($scope.authorData, "Authors");
+    });
+    $scope.genreData = genre.index(function (data) {
+        console.log($scope.genreData, "Genres");
+    });
 
 	var editBook;
 	var editDescription;	
@@ -42,3 +43,13 @@ app.controller("bookController", ["$http", "$scope", function($http, $scope){
 	}
 	*/
 }]);
+
+//$http
+//	.get("data/bookData.json")
+//	.success(function(data){
+//		console.log("Got dummydata", data);
+//		data.forEach(function(book){
+//			book.all = book.author + " " + book.genre + " " + book.title;
+//		});
+//		$scope.bookData = data;
+//});

@@ -7,13 +7,13 @@ var standardMethods = {
 };
 
 app.factory("book",["$resource", function ($resource) {
-    return $resource("/api/books/:id", { id: "@id" },standardMethods);
+    return $resource("/api/book/:id", { id: "@id" }, standardMethods);
 }]);
 
 app.factory("author", ["$resource", function ($resource) {
-    return $resource("/api/authors/:id", { id: "@id" }, standardMethods);
+    return $resource("/api/author/:id", { id: "@id" }, standardMethods);
 }]);
 
 app.factory("genre", ["$resource", function ($resource) {
-    return $resource("/api/genres/:id", { id: "@id" }, standardMethods);
+    return $resource("/api/genre/:id", { id: "@id" }, standardMethods);
 }]);
