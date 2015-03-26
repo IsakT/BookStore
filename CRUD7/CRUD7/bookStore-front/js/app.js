@@ -1,5 +1,5 @@
 var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"]).
-	config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider){
+	config(["$routeProvider", function ($routeProvider){
 		$routeProvider.
 			when("/home", {
 			    templateUrl: "/bookStore-Front/partials/homeView.html",
@@ -43,6 +43,6 @@ var app = angular.module("bookStore", ["ngRoute", "ui.bootstrap", "ngResource"])
 				redirectTo: "/home"
 			});
 
-			$locationProvider.html5Mode(true);
+		/* $locationProvider.html5Mode(true); */
 
 	}]);
